@@ -1,83 +1,62 @@
 * {
-    /** Este CSS es para eliminar el padding del body (espacios en blancos)*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 body {
-    background-color: 0000;
+    background-color: #fdfdfd;
 }
 
-.nav-bar {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
+
+/*Este es mi nav principal*/
+.navbar {
     background-color: #687FE5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
 }
 
-.nav-link {
-    display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 25px;
-    padding: 20px 20px;
-    transition: 0.9s;
-}
-
-.n-b-c {
-    padding: 20px 50px;
-    margin-top: 40px;
-    margin-right: 25px;
-}
-
-.nav-link:hover {
-    background-color: #efe5f7;
-    border-radius: 100px;
-    color: #01040a;
-    padding: 20px 22px;
-
-}
-
-.logo-item {
-    margin-right: auto;
+/* div flexible entre el logo y los links*/
+.container-navbar {
     display: flex;
-    padding-left: 140px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.container-logo-nabvar {
+    padding-left: 20px;
 
 }
 
 .logo {
-    width: 400px;
-    height: auto;
-
+    height: 120px;
+    width: auto;
 }
 
-
-
-header {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+/*Estilo del menu de listas*/
+.nav-bar {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
-/*? Este css es para estilar el boton en moviles */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    background: none;
+/*Enlaces*/
+.nav-link {
+    text-decoration: none;
     color: white;
-    padding: 20px
+    font-size: 25px;
+    transition: 0.3s;
+    padding: 8px 12px;
+    border-radius: 10px;
 }
 
+.nav-link:hover {
+    background-color: #efe5f7;
+    color: black;
+    border-radius: 100px;
 
-/*? CSS para desplegar el boton en moviles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        z-index: 10;
-    }
 }
