@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #fdfdfd;
+    background-color: white;
 }
 
 
@@ -59,4 +59,90 @@ body {
     color: black;
     border-radius: 100px;
 
+}
+
+.nav-bar.activo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #687FE5;
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/*? Media query para el menu desplegable*/
+@media (max-width: 768px) {
+    /*? Esto es interesante, por que al posicionar el (nav) como relative, hacemos que los hijos siempre cuenten desde el, y no desde el documento completo */
+
+    nav {
+        position: relative;
+    }
+
+    .nav-bar {
+        position: absolute;
+        top: 100%;
+        left: 52%;
+        transform: translateX(-50%);
+        width: 85%;
+        max-width: 350px;
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px #230d1d;
+    }
+
+    .nav-bar.activo {
+        display: flex;
+
+    }
+
+    .container-link-nav {
+        margin: 10px 0;
+        padding: 0;
+
+    }
+
+    .nav-link {
+        display: block;
+        font-size: 18px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 25px;
+        color: white;
+        background-color: #687FE5;
+        border: none;
+        padding: 2px;
+        margin-top: 40px;
+        z-index: 1010;
+        margin-left: 20px;
+    }
+
+
+}
+
+/*? Media query para el logo*/
+@media (max-width: 768px) {
+    .logo {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .container-logo-nabvar {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
 }
