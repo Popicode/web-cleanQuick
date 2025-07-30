@@ -1,0 +1,8 @@
+{
+    "editor.cursorStyle": "line", // Tipo palito moderno
+    "editor.cursorBlinking": "phase", // Parpadeo suave y moderno
+    "editor.cursorWidth": 3, // Un poco más grueso que el estándar
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#b7d821" // Color cian brillante (puedes cambiarlo)
+    }
+}
