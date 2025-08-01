@@ -87,9 +87,9 @@ body {
         position: absolute;
         top: 100%;
         left: 23%;
-        transform: translateX(-50%);
+        transform: translateX(0%);
         width: 85%;
-        max-width: 350px;
+        max-width: 200px;
         display: none;
         align-items: center;
         flex-direction: column;
@@ -112,7 +112,7 @@ body {
 
     .nav-link {
         display: block;
-        font-size: 18px;
+        font-size: 15px;
         padding: 10px 15px;
         border-radius: 10px;
         transition: background-color 0.3s ease;
@@ -173,6 +173,7 @@ body {
     max-width: 250px;
     width: 90%;
     transition: transform 0.3s ease;
+    user-select: none;
 }
 
 .hero-card:hover {
@@ -206,14 +207,22 @@ body {
         justify-content: flex-start;
         align-items: center;
         padding-left: 5%;
-        padding-top: 5%;
+        padding-top: 30%;
     }
 
     .hero-card {
-        width: 60%;
+        width: 50%;
         max-width: 250px;
         padding: 1.2rem;
         border-radius: 18;
 
+    }
+
+    .hero-title {
+        font-size: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
     }
 }
