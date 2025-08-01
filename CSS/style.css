@@ -153,7 +153,7 @@ body {
 
 .hero {
     background-image: url("../imagenes/hero.jpg");
-    height: 100vh;
+    height: 99vh;
     background-size: cover;
     background-position: center;
     display: flex;
