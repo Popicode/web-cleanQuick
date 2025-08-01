@@ -152,8 +152,8 @@ body {
 /*? Estilos para el hero*/
 
 .hero {
-    background-image: url("../imagenes/hero.jpg");
-    height: 99vh;
+    background-image: url("../imagenes/hero1.jpg");
+    height: 100vh;
     background-size: cover;
     background-position: center;
     display: flex;
