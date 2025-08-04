@@ -152,7 +152,7 @@ body {
 /*? Estilos para el hero*/
 
 .hero {
-    background-image: url("../imagenes/hero1.jpg");
+    background-image: url("../imagenes/HERO-FONDO-WHITE-Photoroom.png");
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -241,6 +241,3 @@ body {
 
 /** Sección de servicios*/
 .services {
-    background: linear-gradient(to bottom, white, #EDE0F1);
-    padding: 50px 20px;
-}
