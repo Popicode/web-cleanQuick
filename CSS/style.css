@@ -6,9 +6,9 @@
 }
 
 body {
-    background-color: white;
+    background: linear-gradient(to bottom right, #dff6ff, #c0f5e6);
+    color: #2d2d2d;
 }
-
 
 /*Este es mi nav principal*/
 .navbar {
@@ -240,4 +240,3 @@ body {
 }
 
 /** Sección de servicios*/
-.services {
