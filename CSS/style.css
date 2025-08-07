@@ -80,46 +80,50 @@ body {
 @media (max-width: 768px) {
     /*? Esto es interesante, por que al posicionar el (nav) como relative, hacemos que los hijos siempre cuenten desde el, y no desde el documento completo */
 
-    nav {
+    .container-navbar {
         position: relative;
     }
 
     .nav-bar {
         position: absolute;
-        top: 100%;
-        left: 23%;
-        transform: translateX(0%);
-        width: 85%;
-        max-width: 200px;
-        display: none;
-        align-items: center;
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px 0;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px #230d1d;
+        top: calc(100% + 6px);
+        border-radius: 15px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, .15);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform .40s ease, opacity .2s ease;
+        display: block;
+        max-height: min(70vh, 420px);
+        z-index: 1010;
+    }
 
+    .nav-bar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 1.25rem;
+        right: 1.25rem;
+        height: 2px;
+        background: white;
     }
 
     .nav-bar.activo {
-        display: flex;
-
+        transform: scaleY(1);
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .container-link-nav {
-        margin: 10px 0;
-        padding: 0;
-
+        width: auto;
     }
 
     .nav-link {
         display: block;
-        font-size: 15px;
-        padding: 10px 15px;
-        border-radius: 10px;
-        transition: background-color 0.3s ease;
-        width: 100%;
-        align-items: center;
+        padding: 14px 15px;
+        font-size: 16px;
+        border-radius: 8px;
     }
 
     .menu-toggle {
@@ -303,6 +307,8 @@ body {
     }
 
 }
+
+@media (max-width: 480px) {}
 
 
 /** Sección de servicios*/
