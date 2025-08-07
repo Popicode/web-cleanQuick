@@ -29,7 +29,6 @@ body {
 
 .container-logo-nabvar {
     padding-left: 20px;
-
 }
 
 .logo {
@@ -123,14 +122,13 @@ body {
     }
 
     .menu-toggle {
-        display: block;
-        font-size: 25px;
+        display: flex;
+        font-size: 30px;
         color: white;
-        background-color: #ba06b1;
+        background-color: #bd20b5;
         border: none;
-        padding: 2px;
-        margin-top: 40px;
-        z-index: 1010;
+        margin-top: 10px;
+        z-index: 1010px;
         margin-left: 20px;
     }
 
@@ -140,14 +138,14 @@ body {
 /*? Media query para el logo*/
 @media (max-width: 768px) {
     .logo {
-        max-width: 80%;
+        max-width: 65%;
         height: auto;
+        margin-left: 25%;
     }
 
     .container-logo-nabvar {
         display: flex;
         justify-content: center;
-        padding: 10px 0;
     }
 }
 
@@ -157,15 +155,12 @@ body {
     border-left: 4px solid #4b2d88;
     padding-left: 1rem;
     border-radius: 10px;
-
-
     padding-right: 1rem;
 
 }
 
 
 .eslogan-hero {
-
     font-size: 50px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
@@ -264,17 +259,29 @@ body {
     .hero {
         justify-content: flex-start;
         align-items: center;
-        padding-left: 5%;
-        padding-top: 30%;
-        flex-direction: row;
+        padding: 15% 5% 0 5%;
+        flex-direction: column;
+    }
+
+    .hero-text-block {
+        margin-bottom: 1.4rem;
+        border-left: 2px solid #4b2d88;
+    }
+
+    .eslogan-hero {
+        font-size: 40px;
+    }
+
+    .eslogan-hero2 {
+        font-size: 25px;
     }
 
     .hero-card {
         width: 50%;
         max-width: 250px;
         padding: 1.2rem;
-        border-radius: 18;
-
+        border-radius: 60px;
+        margin-right: 50%;
     }
 
     .hero-title {
@@ -288,6 +295,8 @@ body {
     .hero-frase {
         display: none;
     }
+
 }
+
 
 /** Sección de servicios*/
