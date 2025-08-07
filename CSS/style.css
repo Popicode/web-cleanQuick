@@ -128,7 +128,7 @@ body {
         background-color: #bd20b5;
         border: none;
         margin-top: 10px;
-        z-index: 1010px;
+        z-index: 1010;
         margin-left: 20px;
     }
 
@@ -138,14 +138,15 @@ body {
 /*? Media query para el logo*/
 @media (max-width: 768px) {
     .logo {
-        max-width: 65%;
+        max-width: 75%;
         height: auto;
-        margin-left: 25%;
+
     }
 
     .container-logo-nabvar {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+        padding-right: 20px;
     }
 }
 
@@ -239,6 +240,7 @@ body {
     display: inline-block;
     margin-left: 0.3rem;
     animation: floatUp 2s ease-in-out infinite;
+    font-size: 0.8em;
 }
 
 @keyframes floatUp {
@@ -269,7 +271,7 @@ body {
     }
 
     .eslogan-hero {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .eslogan-hero2 {
@@ -281,7 +283,9 @@ body {
         max-width: 250px;
         padding: 1.2rem;
         border-radius: 60px;
-        margin-right: 50%;
+        margin: 0 auto;
+        margin-left: 5%;
+        margin-top: 10%;
     }
 
     .hero-title {
