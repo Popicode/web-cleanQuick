@@ -239,6 +239,10 @@ body {
     font-size: 30px;
 }
 
+.highlight-bg {
+    font-family: "Poppins", sans-serif;
+}
+
 /**! Animación para emoji*/
 .highlight-bg::after {
     content: "🧼";
@@ -308,7 +312,51 @@ body {
 
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    .hero {
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15% 5% 0 5%;
+        flex-direction: column;
+    }
+
+    .hero-text-block {
+        margin-bottom: 1.4rem;
+        border-left: 2px solid #4b2d88;
+        margin-bottom: 7rem;
+        margin-top: 2rem;
+    }
+
+    .eslogan-hero {
+        font-size: 35px;
+    }
+
+    .eslogan-hero2 {
+        font-size: 25px;
+    }
+
+    .hero-card {
+        width: 50%;
+        max-width: 250px;
+        padding: 1.2rem;
+        border-radius: 60px;
+        margin: 0 auto;
+        margin-left: 7%;
+    }
+
+    .hero-title {
+        font-size: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero-frase {
+        display: none;
+    }
+
+}
 
 
 /** Sección de servicios*/
