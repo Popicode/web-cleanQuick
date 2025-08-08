@@ -358,5 +358,52 @@ body {
 
 }
 
-
 /** Sección de servicios*/
+
+#servicios {
+    position: relative;
+    background: transparent;
+    padding: 4rem 2rem;
+}
+
+/* #servicios::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 0;
+} */
+
+.services-grid>h3 {
+    grid-column: 1/-1;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    color: #871682;
+    margin-bottom: 2rem;
+}
+
+.service {
+    display: contents;
+}
+
+.service-media img {}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-content:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/** Alternar en zig-zag con grid, en filas pares*/
