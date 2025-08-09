@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom right, #dff6ff, #c0f5e6);
+    background: #ffffff;
     color: #2d2d2d;
 }
 
@@ -359,51 +359,95 @@ body {
 }
 
 /** Sección de servicios*/
-
 #servicios {
     position: relative;
     background: transparent;
-    padding: 4rem 2rem;
+    padding: 4rem 2 rem;
 }
 
-/* #servicios::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(2px);
-    z-index: 0;
-} */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: stretch;
+}
 
 .services-grid>h3 {
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
     text-align: center;
     font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    color: #871682;
+    font-size: 2.5rem;
+    color: #871681;
     margin-bottom: 2rem;
+    margin-top: 2.5rem;
 }
 
 .service {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #e9e7e7;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+    width: 100%;
+    max-width: 360px;
+    transition: transform .25s ease, box-shadow .25s ease;
+    height: 100%;
 }
 
-.service-media img {}
+.service:hover {
+    transform: scaleY(-4px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .12);
+}
+
+.service-media {
+    margin-bottom: 1rem;
+}
+
+.service-media svg,
+.service-media img {
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .08));
+    flex-shrink: 0;
+}
 
 .service-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
 }
 
-.service-content:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+.service-content h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.25rem;
+    color: #bd20b5;
+    margin-bottom: .5rem;
 }
 
-/** Alternar en zig-zag con grid, en filas pares*/
+.service-content p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.service-cta {
+    background-color: #871682;
+    color: #fff;
+    padding: .6rem 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color .25s ease;
+    align-self: center;
+    margin-top: auto;
+}
+
+.service-cta:hover {
+    background-color: #bd20b5;
+}
