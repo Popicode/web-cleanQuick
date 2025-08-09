@@ -1,18 +1,29 @@
+:root {
+    --color-principal: #8E2DE2;
+    --color-principal-oscuro: #5A189A;
+    --color-acento: #C77DFF;
+    --color-fondo-claro: #F8F9FA;
+    --color-texto: #2D2D2D;
+    --color-texto-inverso: #FFFFFF;
+    --color-hover-claro: #EDE7F6;
+}
+
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
-    background: #ffffff;
-    color: #2d2d2d;
+    background: var(--color-fondo-claro);
+    color: var(--color-texto);
 }
 
 /*Este es mi nav principal*/
 .navbar {
-    background-color: #bd20b5;
+    background-color: var(--color-principal);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 10px 0;
 }
@@ -34,7 +45,6 @@ body {
 .logo {
     height: 70px;
     width: auto;
-
 }
 
 /*Estilo del menu de listas*/
@@ -47,28 +57,26 @@ body {
 /*Enlaces*/
 .nav-link {
     text-decoration: none;
-    color: white;
+    color: var(--color-texto-inverso);
     font-size: 20px;
     transition: 0.3s;
     padding: 8px 10px;
     border-radius: 10px;
     margin-right: 30px;
-    font-family: "Poppins", s;
-
+    font-family: "Poppins", sans-serif;
 }
 
 .nav-link:hover {
-    background-color: #efe5f7;
-    color: black;
+    background-color: var(--color-hover-claro);
+    color: var(--color-texto);
     border-radius: 100px;
-
 }
 
 .nav-bar.activo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #871682;
+    background-color: var(--color-principal-oscuro);
     width: 100%;
 }
 
@@ -78,8 +86,6 @@ body {
 
 /*? Media query para el menu desplegable*/
 @media (max-width: 768px) {
-    /*? Esto es interesante, por que al posicionar el (nav) como relative, hacemos que los hijos siempre cuenten desde el, y no desde el documento completo */
-
     .container-navbar {
         position: relative;
     }
@@ -106,7 +112,7 @@ body {
         left: 1.25rem;
         right: 1.25rem;
         height: 2px;
-        background: white;
+        background: var(--color-texto-inverso);
     }
 
     .nav-bar.activo {
@@ -129,15 +135,13 @@ body {
     .menu-toggle {
         display: flex;
         font-size: 30px;
-        color: white;
-        background-color: #bd20b5;
+        color: var(--color-texto-inverso);
+        background-color: var(--color-principal);
         border: none;
         margin-top: 10px;
         z-index: 1010;
         margin-left: 20px;
     }
-
-
 }
 
 /*? Media query para el logo*/
@@ -145,7 +149,6 @@ body {
     .logo {
         max-width: 75%;
         height: auto;
-
     }
 
     .container-logo-nabvar {
@@ -158,19 +161,18 @@ body {
 /*? Estilos para el hero*/
 .hero-text-block {
     position: relative;
-    border-left: 4px solid #4b2d88;
+    border-left: 4px solid var(--color-principal-oscuro);
     padding-left: 1rem;
     border-radius: 10px;
     padding-right: 1rem;
     margin-bottom: 7rem;
 }
 
-
 .eslogan-hero {
     font-size: 50px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    color: #ba06b1;
+    color: var(--color-acento);
 }
 
 .eslogan-hero2 {
@@ -178,9 +180,8 @@ body {
     font-size: 30px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    color: #c927c1;
+    color: var(--color-principal);
     letter-spacing: 0.02rem;
-
 }
 
 .hero {
@@ -194,13 +195,11 @@ body {
     padding-left: 3%;
     padding-top: 7%;
     flex-direction: column;
-
-
 }
 
 .hero-card {
-    background-color: #871681;
-    color: white;
+    background-color: var(--color-principal-oscuro);
+    color: var(--color-texto-inverso);
     padding: 2rem;
     border-radius: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -212,26 +211,24 @@ body {
     position: relative;
     margin-top: 75px;
     margin-left: 10%;
-
 }
 
 .hero-card:hover {
     transform: scale(1.1) translateY(-10%);
     cursor: pointer;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-
 }
 
 .hero-icon {
     width: 60px;
     margin-top: 1rem;
     height: auto;
-    filter: brightness(0) invert(1)
+    filter: brightness(0) invert(1);
 }
 
 .hero-title {
     font-size: 20px;
-    color: white;
+    color: var(--color-texto-inverso);
     padding-bottom: 8px;
 }
 
@@ -243,7 +240,6 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-/**! Animación para emoji*/
 .highlight-bg::after {
     content: "🧼";
     display: inline-block;
@@ -265,7 +261,6 @@ body {
 }
 
 /*? Media query para el hero en celulares medianos*/
-
 @media (max-width: 768px) {
     .hero {
         justify-content: flex-start;
@@ -276,7 +271,7 @@ body {
 
     .hero-text-block {
         margin-bottom: 1.4rem;
-        border-left: 2px solid #4b2d88;
+        border-left: 2px solid var(--color-principal-oscuro);
         margin-bottom: 7rem;
         margin-top: 2rem;
     }
@@ -309,7 +304,6 @@ body {
     .hero-frase {
         display: none;
     }
-
 }
 
 @media (max-width: 480px) {
@@ -322,7 +316,7 @@ body {
 
     .hero-text-block {
         margin-bottom: 1.4rem;
-        border-left: 2px solid #4b2d88;
+        border-left: 2px solid var(--color-principal-oscuro);
         margin-bottom: 7rem;
         margin-top: 2rem;
     }
@@ -355,7 +349,6 @@ body {
     .hero-frase {
         display: none;
     }
-
 }
 
 /** Sección de servicios*/
@@ -378,7 +371,7 @@ body {
     text-align: center;
     font-family: "Poppins", sans-serif;
     font-size: 2.5rem;
-    color: #871681;
+    color: var(--color-principal-oscuro);
     margin-bottom: 2rem;
     margin-top: 2.5rem;
 }
@@ -388,7 +381,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: #e9e7e7;
+    background: var(--color-fondo-claro);
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
@@ -426,19 +419,19 @@ body {
 .service-content h4 {
     font-family: "Poppins", sans-serif;
     font-size: 1.25rem;
-    color: #bd20b5;
+    color: var(--color-principal);
     margin-bottom: .5rem;
 }
 
 .service-content p {
     font-size: 1rem;
-    color: #333;
+    color: var(--color-texto);
     margin-bottom: 1rem;
 }
 
 .service-cta {
-    background-color: #871682;
-    color: #fff;
+    background-color: var(--color-principal-oscuro);
+    color: var(--color-texto-inverso);
     padding: .6rem 1.2rem;
     border-radius: 10px;
     text-decoration: none;
@@ -449,5 +442,5 @@ body {
 }
 
 .service-cta:hover {
-    background-color: #bd20b5;
+    background-color: var(--color-principal);
 }
