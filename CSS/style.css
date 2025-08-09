@@ -412,6 +412,14 @@ body {
     flex-shrink: 0;
 }
 
+.service-media img {
+    transition: transform .25s ease;
+}
+
+.service:hover .service-media img {
+    transform: scale(1.09);
+}
+
 .service-content {
     display: flex;
     flex-direction: column;
