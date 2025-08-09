@@ -387,18 +387,20 @@ body {
     box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
     width: 100%;
     max-width: 360px;
-    transition: transform .25s ease, box-shadow .25s ease;
+    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease, color .25s ease;
     height: 100%;
 }
 
 .service:hover {
-    transform: scaleY(-4px);
+    transform: translateY(-6px);
     box-shadow: 0 14px 32px rgba(0, 0, 0, .12);
+    background-color: var(--color-hover-claro);
 }
 
 .service-media {
     margin-bottom: 1rem;
 }
+
 
 .service-media svg,
 .service-media img {
