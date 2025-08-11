@@ -386,7 +386,7 @@ body {
     background-color: var(--color-principal);
     margin: 0 auto 0.8rem auto;
     border-radius: 2px;
-    transform: scaleX(1);
+    transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.5s ease-out;
 }

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleBtn = document.querySelector(".menu-toggle");
     const navBar = document.querySelector(".nav-bar");
     const navLink = document.querySelectorAll(".nav-link");
+    const titleServicios = document.querySelector(".services-grid > h3");
 
     //? Esto agrega la clase activo al menu-toggle // abre y cierra el boton 
     toggleBtn.addEventListener("click", () => {
@@ -23,4 +24,20 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleBtn.setAttribute("aria-expanded", "false")
         })
     })
+
+    //? Observador para animar la linea del titulo en sección servicios
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                titleServicios.classList.add("linea-activa");
+            }
+        })
+    }, {
+        threshold: 0.5
+    });
+    observer.observe(titleServicios)
+
+
+
+
 })
