@@ -173,6 +173,8 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     color: var(--color-acento);
+    color: var(--color-principal);
+
 }
 
 .eslogan-hero2 {
@@ -180,7 +182,7 @@ body {
     font-size: 30px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    color: var(--color-principal);
+    color: var(--color-acento);
     letter-spacing: 0.02rem;
 }
 
@@ -351,6 +353,51 @@ body {
     }
 }
 
+@media (max-width: 375px) {
+    .hero {
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15% 5% 0 5%;
+        flex-direction: column;
+    }
+
+    .hero-text-block {
+        margin-bottom: 1.4rem;
+        border-left: 2px solid var(--color-principal-oscuro);
+        margin-bottom: 7rem;
+        margin-top: 2rem;
+    }
+
+    .eslogan-hero {
+        font-size: 25px;
+    }
+
+    .eslogan-hero2 {
+        font-size: 19px;
+    }
+
+    .hero-card {
+        width: 50%;
+        max-width: 250px;
+        padding: 1.2rem;
+        border-radius: 60px;
+        margin: 0 auto;
+        margin-left: 7%;
+    }
+
+    .hero-title {
+        font-size: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero-frase {
+        display: none;
+    }
+}
+
 /** Sección de servicios*/
 #servicios {
     position: relative;
@@ -475,4 +522,22 @@ body {
 
 .service-cta:hover {
     background-color: var(--color-principal);
+}
+
+/** Media query para sección de servicios*/
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service {
+        max-width: 90%;
+    }
+
+    .service-media svg,
+    .service-media img {
+        width: 70px;
+    }
 }
