@@ -367,6 +367,8 @@ body {
 }
 
 .services-grid>h3 {
+    position: relative;
+    overflow: hidden;
     grid-column: 1 / -1;
     text-align: center;
     font-family: "Poppins", sans-serif;
@@ -374,6 +376,23 @@ body {
     color: var(--color-principal-oscuro);
     margin-bottom: 2rem;
     margin-top: 2.5rem;
+}
+
+.services-grid>h3::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-principal);
+    margin: 0 auto 0.8rem auto;
+    border-radius: 2px;
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: transform 0.5s ease-out;
+}
+
+.services-grid>h3.linea-activa::before {
+    transform: scaleX(1);
 }
 
 .service {
@@ -417,7 +436,7 @@ body {
 }
 
 .service:hover .service-media img {
-    transform: scale(1.09);
+    transform: scale(1.06);
 }
 
 .service-content {
