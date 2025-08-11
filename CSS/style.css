@@ -147,6 +147,19 @@ body {
 /*? Media query para el logo*/
 @media (max-width: 768px) {
     .logo {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .container-logo-nabvar {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
         max-width: 75%;
         height: auto;
     }
@@ -262,7 +275,7 @@ body {
     }
 }
 
-/*? Media query para el hero en celulares medianos*/
+/*? Media query para tablets*/
 @media (max-width: 768px) {
     .hero {
         justify-content: flex-start;
@@ -272,7 +285,6 @@ body {
     }
 
     .hero-text-block {
-        margin-bottom: 1.4rem;
         border-left: 2px solid var(--color-principal-oscuro);
         margin-bottom: 7rem;
         margin-top: 2rem;
@@ -369,11 +381,11 @@ body {
     }
 
     .eslogan-hero {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .eslogan-hero2 {
-        font-size: 19px;
+        font-size: 25px;
     }
 
     .hero-card {
@@ -526,6 +538,7 @@ body {
 
 /** Media query para sección de servicios*/
 
+/*? Query para tablets*/
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
@@ -533,11 +546,25 @@ body {
     }
 
     .service {
-        max-width: 90%;
+        max-width: 420px;
+        padding: 1.25rem;
     }
 
     .service-media svg,
     .service-media img {
         width: 70px;
     }
+}
+
+/*? Query para celulares gama alta y media*/
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .service {
+        max-width: 90%;
+    }
+
 }
