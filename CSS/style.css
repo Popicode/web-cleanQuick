@@ -220,7 +220,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     text-align: center;
     max-width: 250px;
-    width: 90%;
+    width: 60%;
     transition: transform 0.3s ease;
     user-select: none;
     position: relative;
@@ -414,7 +414,7 @@ body {
 #servicios {
     position: relative;
     background: transparent;
-    padding: 4rem 2 rem;
+    padding: 4rem 2rem;
 }
 
 .services-grid {
@@ -567,4 +567,12 @@ body {
         max-width: 90%;
     }
 
+}
+
+/** Sección "Nosotros"*/
+
+#nosotros {
+    position: relative;
+    background: transparent;
+    padding: 4rem 2rem;
 }
