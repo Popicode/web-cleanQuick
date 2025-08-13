@@ -425,7 +425,7 @@ body {
     align-items: stretch;
 }
 
-.services-grid>h3 {
+.services-grid>h2 {
     position: relative;
     overflow: hidden;
     grid-column: 1 / -1;
@@ -437,11 +437,11 @@ body {
     margin-top: 2.5rem;
 }
 
-.services-grid>h3::before {
+.services-grid>h2::before {
     content: "";
     display: block;
     width: 70%;
-    height: 3px;
+    height: 2px;
     background-color: var(--color-principal);
     margin: 0 auto 0.8rem auto;
     border-radius: 2px;
@@ -452,7 +452,7 @@ body {
 
 }
 
-.services-grid>h3.linea-activa::before {
+.services-grid>h2.linea-activa::before {
     transform: scaleX(1);
     opacity: 1;
 }

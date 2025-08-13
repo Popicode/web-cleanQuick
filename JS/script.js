@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleBtn = document.querySelector(".menu-toggle");
     const navBar = document.querySelector(".nav-bar");
     const navLink = document.querySelectorAll(".nav-link");
-    const titleServicios = document.querySelector(".services-grid > h3");
+    const titleServicios = document.querySelector(".services-grid > h2");
 
     //? Esto agrega la clase activo al menu-toggle // abre y cierra el boton 
     toggleBtn.addEventListener("click", () => {
