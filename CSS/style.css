@@ -576,3 +576,17 @@ body {
     background: transparent;
     padding: 4rem 2rem;
 }
+
+.container-nosotros {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+}
+
+.container-nosotros>h2 {
+    color: var(--color-principal-oscuro);
+    position: relative;
+    text-align: center;
+    font-size: 2.5rem;
+    grid-column: 1 / -1;
+    font-family: "Poppins", sans-serif;
+}
