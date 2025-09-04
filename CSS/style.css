@@ -25,7 +25,7 @@ body {
 .navbar {
     background-color: var(--color-principal);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 /* div flexible entre el logo y los links*/
@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 60%;
     max-width: auto;
     margin: 0 auto;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .logo {
-    height: 70px;
+    height: 65px;
     width: auto;
 }
 
@@ -60,9 +60,9 @@ body {
     color: var(--color-texto-inverso);
     font-size: 20px;
     transition: 0.3s;
-    padding: 8px 10px;
+    padding: 8px 16px;
     border-radius: 10px;
-    margin-right: 30px;
+    margin-right: 20px;
     font-family: "Poppins", sans-serif;
 }
 
@@ -582,11 +582,11 @@ body {
     grid-template-columns: 1.1fr 1fr;
 }
 
-.container-nosotros>h2 {
+.container-nosotros>h3 {
     color: var(--color-principal-oscuro);
     position: relative;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     grid-column: 1 / -1;
     font-family: "Poppins", sans-serif;
 }
