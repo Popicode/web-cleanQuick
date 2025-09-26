@@ -14,6 +14,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -38,12 +39,10 @@ body {
     margin: 0 auto;
 }
 
-.container-logo-nabvar {
-    padding-left: 20px;
-}
+
 
 .logo {
-    height: 65px;
+    height: 86px;
     width: auto;
 }
 
@@ -58,9 +57,9 @@ body {
 .nav-link {
     text-decoration: none;
     color: var(--color-texto-inverso);
-    font-size: 20px;
+    font-size: 18px;
     transition: 0.3s;
-    padding: 8px 16px;
+    padding: 9px 5px;
     border-radius: 10px;
     margin-right: 20px;
     font-family: "Poppins", sans-serif;
@@ -160,7 +159,7 @@ body {
 
 @media (max-width: 480px) {
     .logo {
-        max-width: 75%;
+        max-width: 100%;
         height: auto;
     }
 
@@ -569,24 +568,34 @@ body {
 
 }
 
-/** Sección "Nosotros"*/
+/** Sección "Como funciona"*/
 
-#nosotros {
-    position: relative;
+#funcionamiento {
     background: transparent;
     padding: 4rem 2rem;
 }
 
-.container-nosotros {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-}
-
-.container-nosotros>h3 {
+.title-funcionamiento {
     color: var(--color-principal-oscuro);
     position: relative;
     text-align: center;
     font-size: 2.0rem;
-    grid-column: 1 / -1;
     font-family: "Poppins", sans-serif;
+}
+
+.subtitle-funcionamiento {
+    color: var(--color-principal-oscuro);
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 5%;
+}
+
+.container-funcionamiento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: stretch;
+    gap: 2rem;
 }
