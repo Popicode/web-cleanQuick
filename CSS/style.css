@@ -579,7 +579,7 @@ body {
     color: var(--color-principal-oscuro);
     position: relative;
     text-align: center;
-    font-size: 2.0rem;
+    font-size: 2.2rem;
     font-family: "Poppins", sans-serif;
 }
 
@@ -598,4 +598,32 @@ body {
     justify-items: center;
     align-items: stretch;
     gap: 2rem;
+    background-color: aquamarine;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.como-funciona {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--color-fondo-claro);
+    font-size: 1.1rem;
+    padding: 1.0rem;
+    background-color: wheat;
+    max-width: 350px;
+    height: 100%;
+}
+
+.title-como-funciona {
+    color: var(--color-principal-oscuro);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10%;
+}
+
+.text-funciona {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
 }
