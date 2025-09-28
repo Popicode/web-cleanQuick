@@ -598,7 +598,6 @@ body {
     justify-items: center;
     align-items: stretch;
     gap: 2rem;
-    background-color: aquamarine;
     max-width: 1300px;
     margin: 0 auto;
 }
@@ -611,7 +610,6 @@ body {
     background: var(--color-fondo-claro);
     font-size: 1.1rem;
     padding: 1.0rem;
-    background-color: wheat;
     max-width: 350px;
     height: 100%;
 }
