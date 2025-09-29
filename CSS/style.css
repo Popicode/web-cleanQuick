@@ -589,7 +589,7 @@ body {
     text-align: center;
     font-size: 1.5rem;
     font-family: "Poppins", sans-serif;
-    margin-bottom: 5%;
+    margin-bottom: 35px;
 }
 
 .container-funcionamiento {
@@ -598,8 +598,11 @@ body {
     justify-items: center;
     align-items: stretch;
     gap: 2rem;
-    max-width: 1300px;
+    max-width: 1500px;
+    height: fit-content;
     margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 70px
 }
 
 .como-funciona {
@@ -612,16 +615,20 @@ body {
     padding: 1.0rem;
     max-width: 350px;
     height: 100%;
+
 }
 
 .title-como-funciona {
     color: var(--color-principal-oscuro);
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
-    margin-bottom: 10%;
+    margin-bottom: 25px;
 }
 
 .text-funciona {
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
 }
+
+/*? Media query para tablets*/
+@media (max-width:768px) {}
