@@ -22,6 +22,8 @@ body {
     color: var(--color-texto);
 }
 
+
+
 /*Este es mi nav principal*/
 .navbar {
     background-color: var(--color-principal);
@@ -439,7 +441,7 @@ body {
 .services-grid>h2::before {
     content: "";
     display: block;
-    width: 70%;
+    width: 100%;
     height: 2px;
     background-color: var(--color-principal);
     margin: 0 auto 0.8rem auto;
@@ -631,4 +633,29 @@ body {
 }
 
 /*? Media query para tablets*/
-@media (max-width:768px) {}
+@media (max-width:768px) {
+    .container-funcionamiento {
+        grid-template-columns: 1fr;
+    }
+
+    .como-funciona {
+        max-width: 420px;
+        border-radius: 2px;
+    }
+
+    .service-media {
+        width: 70px;
+    }
+
+}
+
+/*? Media query para mobiles */
+@media (max-width: 480px) {
+    .container-funcionamiento {
+        grid-template-columns: 1fr;
+    }
+
+    .como-funciona {
+        max-width: 100%;
+    }
+}
