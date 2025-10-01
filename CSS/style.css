@@ -522,6 +522,7 @@ body {
 }
 
 .service-cta {
+    font-family: "Poppins", sans-serif;
     background-color: var(--color-principal-oscuro);
     color: var(--color-texto-inverso);
     padding: .6rem 1.2rem;
@@ -531,10 +532,16 @@ body {
     transition: background-color .25s ease;
     align-self: center;
     margin-top: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 .service-cta:hover {
     background-color: var(--color-principal);
+}
+
+.service-cta:active {
+    transform: scale(0.9);
 }
 
 /** Media query para sección de servicios*/
