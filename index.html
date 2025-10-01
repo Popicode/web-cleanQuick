@@ -120,28 +120,38 @@
             </article>
         </div>
     </section>
-    <section class="modal-forms">
-        <div class="contenedor-forms">
-            <h3>Contacto</h3>
-            <h4>Ingresa tús datos, te contactaremos en la brevedad</h4>
-            <form action="">
-                <label for="name">Nombre Completo</label> <input id="name" type="text" placeholder="Ingrese su nombre">
-                <label for="email">Correo Electronico</label> <input id="email" type="email"
-                    placeholder="Ingrese su gmail">
-                <label for="tel">Telefono</label> <input id="tel" type="tel" placeholder="ingrese su numero">
-                <label for="servicios-modal">Servicios disponibles</label>
-                <select name="servicios-modal" id="servicios-modal">
-                    <option disabled selected>Seleccione un servicio..</option>
-                    <option value="servicio-departamento">Limpieza de departamentos</option>
-                    <option value="servicio-vidrios">limpieza de vidrios</option>
-                    <option value="servicio-casas">Limpieza de casas</option>
-                    <option value="servicio-oficinas">Limpieza de oficinas</option>
-                    <option value="servicio-obras">Limpieza post obras</option>
-                </select>
-                <input type="submit">
-            </form>
-        </div>
-    </section>
+    <div class="modal-overlay hidden">
+        <section class="modal-forms">
+            <h3 class="title-modal">Contacto</h3>
+            <h4 class="subtitle-modal">Ingresa tús datos y te contactaremos en la brevedad</h4>
+            <div class="contenedor-forms">
+                <form class="formulario-modal" action="">
+                    <div>
+                        <label for="name">Nombre Completo</label>
+                        <input id="name" type="text" placeholder="Ingrese su nombre">
+                    </div>
+                    <div>
+                        <label for="email">Correo Electronico</label>
+                        <input id="email" type="email" placeholder="Ingrese su gmail">
+                    </div>
+                    <div>
+                        <label for="tel">Telefono</label> <input id="tel" type="tel" placeholder="ingrese su numero">
+                    </div>
+                    <label for="servicios-modal">Servicios disponibles</label>
+                    <select name="servicios-modal" id="servicios-modal">
+                        <option disabled selected>Seleccione un servicio..</option>
+                        <option value="servicio-departamento">Limpieza de departamentos</option>
+                        <option value="servicio-vidrios">limpieza de vidrios</option>
+                        <option value="servicio-casas">Limpieza de casas</option>
+                        <option value="servicio-oficinas">Limpieza de oficinas</option>
+                        <option value="servicio-obras">Limpieza post obras</option>
+                    </select>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
 
     <section id="funcionamiento" aria-label="tittle-funcionamiento">
         <h3 class="title-funcionamiento">¿Cómo funciona?</h3>

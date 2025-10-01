@@ -579,9 +579,38 @@ body {
 
 
 /* ?Formulario para contacto en "services"*/
-.contenedor-formulario {
-    background-color: #a592b6;
+.modal-forms {
+    margin: 0 auto;
+    padding: 2.5rem;
+    max-width: fit-content;
+    background-color: #EDE7F6;
+    ;
 }
+
+.title-modal {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+
+}
+
+.subtitle-modal {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+}
+
+.formulario-modal {
+    display: grid;
+    grid-template-columns: 1fr s;
+    gap: 1rem;
+}
+
+.formulario-modal div {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 
