@@ -120,39 +120,6 @@
             </article>
         </div>
     </section>
-    <div class="modal-overlay hidden">
-        <section class="modal-forms">
-            <h3 class="title-modal">Contacto</h3>
-            <h4 class="subtitle-modal">Ingresa tús datos y te contactaremos en la brevedad</h4>
-            <div class="contenedor-forms">
-                <form class="formulario-modal" action="">
-                    <div>
-                        <label for="name">Nombre Completo</label>
-                        <input id="name" type="text" placeholder="Ingrese su nombre">
-                    </div>
-                    <div>
-                        <label for="email">Correo Electronico</label>
-                        <input id="email" type="email" placeholder="Ingrese su gmail">
-                    </div>
-                    <div>
-                        <label for="tel">Telefono</label> <input id="tel" type="tel" placeholder="ingrese su numero">
-                    </div>
-                    <label for="servicios-modal">Servicios disponibles</label>
-                    <select name="servicios-modal" id="servicios-modal">
-                        <option disabled selected>Seleccione un servicio..</option>
-                        <option value="servicio-departamento">Limpieza de departamentos</option>
-                        <option value="servicio-vidrios">limpieza de vidrios</option>
-                        <option value="servicio-casas">Limpieza de casas</option>
-                        <option value="servicio-oficinas">Limpieza de oficinas</option>
-                        <option value="servicio-obras">Limpieza post obras</option>
-                    </select>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </section>
-    </div>
-
-
     <section id="funcionamiento" aria-label="tittle-funcionamiento">
         <h3 class="title-funcionamiento">¿Cómo funciona?</h3>
         <h4 class="subtitle-funcionamiento"> El servicio de limpieza</h4>
@@ -182,6 +149,38 @@
         </div>
     </section>
     <script src="js/script.js"></script>
+    <div class="modal-overlay hidden">
+        <section class="modal-forms">
+            <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+            <h3 class="title-modal">Contacto</h3>
+            <!-- <h4 class="subtitle-modal">Ingresa tús datos y te contactaremos en la brevedad</h4> -->
+            <div class="contenedor-forms">
+                <form class="formulario-modal" action="">
+                    <div>
+                        <label for="name">Nombre completo</label>
+                        <input id="name" type="text" placeholder="Ingrese su nombre">
+                    </div>
+                    <div>
+                        <label for="email">Correo electronico</label>
+                        <input id="email" type="email" placeholder="Ingrese su gmail">
+                    </div>
+                    <div>
+                        <label for="tel">Telefono</label> <input id="tel" type="tel" placeholder="ingrese su numero">
+                    </div>
+                    <label for="servicios-modal">Servicios disponibles</label>
+                    <select name="servicios-modal" id="servicios-modal">
+                        <option disabled selected>Seleccione un servicio..</option>
+                        <option value="servicio-departamento">Limpieza de departamentos</option>
+                        <option value="servicio-vidrios">limpieza de vidrios</option>
+                        <option value="servicio-casas">Limpieza de casas</option>
+                        <option value="servicio-oficinas">Limpieza de oficinas</option>
+                        <option value="servicio-obras">Limpieza post obras</option>
+                    </select>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>

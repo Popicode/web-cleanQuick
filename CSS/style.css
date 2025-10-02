@@ -523,7 +523,7 @@ body {
 
 .service-cta {
     font-family: "Poppins", sans-serif;
-    background-color: var(--color-principal-oscuro);
+    background-color: var(--color-principal);
     color: var(--color-texto-inverso);
     padding: .6rem 1.2rem;
     border-radius: 10px;
@@ -534,6 +534,8 @@ body {
     margin-top: auto;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    border: none;
+    outline: none;
 }
 
 .service-cta:hover {
@@ -580,39 +582,100 @@ body {
 
 /* ?Formulario para contacto en "services"*/
 .modal-forms {
+    position: relative;
     margin: 0 auto;
-    padding: 2.5rem;
-    max-width: fit-content;
-    background-color: #EDE7F6;
-    ;
+    padding: 2.0rem;
+    max-width: 520px;
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+    margin-bottom: 1000px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 0;
+    right: 18px;
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--color-principal-oscuro);
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.2s ease-in-out;
+}
+
+.close-modal:hover {
+    font-size: 3rem;
+
 }
 
 .title-modal {
     display: flex;
     font-family: "Poppins", sans-serif;
     justify-content: center;
-
+    color: var(--color-principal-oscuro);
+    font-size: 29px;
 }
 
-.subtitle-modal {
+/* .subtitle-modal {
     display: flex;
     font-family: "Poppins", sans-serif;
     justify-content: center;
-}
+    color: var(--color-principal-oscuro);
+} */
 
 .formulario-modal {
     display: grid;
-    grid-template-columns: 1fr s;
+    grid-template-columns: 1fr;
     gap: 1rem;
+    padding: 20px;
+}
+
+.formulario-modal label {
+    font-size: 17px;
+    padding-bottom: 2px;
+    font-family: "Poppins", sans-serif;
+}
+
+.formulario-modal input,
+.formulario-modal button {
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--color-principal-oscuro);
+    font-size: 14px;
+    border-bottom: 2px solid var(--color-principal-oscuro)
+}
+
+.formulario-modal button {
+    background: var(--color-principal);
+    border-radius: 20px;
+    border-bottom: 0;
+    color: var(--color-texto-inverso);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.formulario-modal>select,
+.formulario-modal>select>option {
+    color: var(--color-principal-oscuro);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 2px solid var(--color-principal-oscuro);
+
 }
 
 .formulario-modal div {
     display: flex;
     flex-direction: column;
 }
-
-
-
 
 
 
