@@ -4,5 +4,6 @@
     "editor.cursorWidth": 3,
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#b7d821"
-    }
+    },
+    "git.ignoreLimitWarning": true
 }

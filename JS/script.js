@@ -7,6 +7,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const navBar = document.querySelector(".nav-bar");
     const navLink = document.querySelectorAll(".nav-link");
     const titleServicios = document.querySelector(".services-grid > h2");
+    const buttonsModalOpen = document.querySelectorAll(".open-modal");
+    const modalOverlay = document.querySelector(".modal-overlay")
+
+
+    //* for each para recorrer todos los botones para abrir el
+    //* modal overlay, "modal" es solo una referencia a los botones
+    buttonsModalOpen.forEach(modal => {
+        modal.addEventListener("click", () => {
+            modalOverlay.classList.toggle("activo")
+        })
+    })
+
 
     //? Esto agrega la clase activo al menu-toggle // abre y cierra el boton 
     toggleBtn.addEventListener("click", () => {

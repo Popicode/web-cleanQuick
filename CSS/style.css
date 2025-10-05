@@ -581,6 +581,14 @@ body {
 
 
 /* ?Formulario para contacto en "services"*/
+.modal-overlay {
+    display: none;
+}
+
+.modal-overlay.activo {
+    display: block;
+}
+
 .modal-forms {
     position: relative;
     margin: 0 auto;
