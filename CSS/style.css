@@ -583,17 +583,23 @@ body {
 /* ?Formulario para contacto en "services"*/
 .modal-overlay {
     border: none;
-    width: auto;
-
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    max-width: none;
+    margin: auto;
+    /** Hace que se centre en el vw*/
+    border-radius: 20px;
 }
+
+.modal-overlay::backdrop {
+    background: rgba(0, 0, 0, .55);
+}
+
 
 .modal-forms {
     position: relative;
-    margin: 0 auto;
-    padding: 2.0rem;
-    max-width: 420px;
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.08);
-    border-radius: 30px;
+    padding: 2.0rem;
 }
 
 .close-modal {
