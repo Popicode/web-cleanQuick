@@ -9,16 +9,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const titleServicios = document.querySelector(".services-grid > h2");
     const buttonsModalOpen = document.querySelectorAll(".open-modal");
     const modalOverlay = document.querySelector(".modal-overlay")
+    const closeModal = document.querySelector(".close-modal")
+
 
 
     //* for each para recorrer todos los botones para abrir el
     //* modal overlay, "modal" es solo una referencia a los botones
     buttonsModalOpen.forEach(modal => {
         modal.addEventListener("click", () => {
-            modalOverlay.classList.toggle("activo")
+            modalOverlay.showModal()
         })
     })
-
+    //* Cerrar modal
+    closeModal.addEventListener("click", () => {
+        modalOverlay.close()
+    })
 
     //? Esto agrega la clase activo al menu-toggle // abre y cierra el boton 
     toggleBtn.addEventListener("click", () => {

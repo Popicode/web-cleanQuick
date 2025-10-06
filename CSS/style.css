@@ -582,21 +582,18 @@ body {
 
 /* ?Formulario para contacto en "services"*/
 .modal-overlay {
-    display: none;
-}
+    border: none;
+    width: auto;
 
-.modal-overlay.activo {
-    display: block;
 }
 
 .modal-forms {
     position: relative;
     margin: 0 auto;
     padding: 2.0rem;
-    max-width: 520px;
+    max-width: 420px;
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.08);
     border-radius: 30px;
-    margin-bottom: 1000px;
 }
 
 .close-modal {
@@ -680,10 +677,8 @@ body {
 
 }
 
-.formulario-modal div {
-    display: flex;
-    flex-direction: column;
-}
+
+
 
 
 
