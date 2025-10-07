@@ -8,7 +8,7 @@
     --color-hover-claro: #EDE7F6;
 }
 
-/* Reset general */
+/**  Reset general */
 * {
     margin: 0;
     padding: 0;
@@ -24,14 +24,14 @@ body {
 
 
 
-/*Este es mi nav principal*/
+/** Este es mi nav principal*/
 .navbar {
     background-color: var(--color-principal);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 5px 0;
 }
 
-/* div flexible entre el logo y los links*/
+/** div flexible entre el logo y los links*/
 .container-navbar {
     display: flex;
     justify-content: space-between;
@@ -48,14 +48,14 @@ body {
     width: auto;
 }
 
-/*Estilo del menu de listas*/
+/** Estilo del menu de listas*/
 .nav-bar {
     display: flex;
     list-style: none;
     gap: 30px;
 }
 
-/*Enlaces*/
+/** Enlaces*/
 .nav-link {
     text-decoration: none;
     color: var(--color-texto-inverso);
@@ -172,7 +172,7 @@ body {
     }
 }
 
-/*? Estilos para el hero*/
+/** Estilos para el hero*/
 .hero-text-block {
     position: relative;
     border-left: 4px solid var(--color-principal-oscuro);
@@ -546,8 +546,6 @@ body {
     transform: scale(0.9);
 }
 
-/** Media query para sección de servicios*/
-
 /*? Query para tablets*/
 @media (max-width: 768px) {
     .services-grid {
@@ -580,7 +578,7 @@ body {
 }
 
 
-/* ?Formulario para contacto en "services"*/
+/** Formulario para contacto en "services"*/
 .modal-overlay {
     border: none;
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.08);
@@ -680,13 +678,13 @@ body {
     background: none;
     outline: none;
     border-bottom: 2px solid var(--color-principal-oscuro);
-
 }
 
-
-
-
-
+@media (max-width:768px) {
+    .modal-overlay {
+        display: none;
+    }
+}
 
 /** Sección "Como funciona"*/
 
@@ -767,7 +765,7 @@ body {
 
 }
 
-/*? Media query para mobiles */
+/*? Media query para moviles */
 @media (max-width: 480px) {
     .container-funcionamiento {
         grid-template-columns: 1fr;
@@ -777,3 +775,6 @@ body {
         max-width: 100%;
     }
 }
+
+
+/** Sección "Quienes somos"/
