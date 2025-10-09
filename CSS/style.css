@@ -777,4 +777,12 @@ body {
 }
 
 
-/** Sección "Quienes somos"/
+/** Sección "Quienes somos"**/
+
+.title-quienes-somos {
+    color: var(--color-principal-oscuro);
+    position: relative;
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: "Poppins", sans-serif;
+}
