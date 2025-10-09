@@ -3,6 +3,7 @@
     --color-principal-oscuro: #5A189A;
     --color-acento: #C77DFF;
     --color-fondo-claro: #F8F9FA;
+    --color-fondo-oscuro: #F3EEFB;
     --color-texto: #2D2D2D;
     --color-texto-inverso: #FFFFFF;
     --color-hover-claro: #EDE7F6;
@@ -780,27 +781,30 @@ body {
 /** Sección "Quienes somos"**/
 
 .section-about {
-    /* background-color: rgb(242, 240, 237); */
-    margin-bottom: 1000px;
+    /* background-color: #F8F4FD; */
+    padding-bottom: 1000px;
+    margin-top: 100px;
+
 }
 
 .title-about {
     color: var(--color-principal-oscuro);
-    position: relative;
     text-align: center;
     font-size: 2.2rem;
     font-family: "Poppins", sans-serif;
-    margin-bottom: 150px;
+    border-right: solid 2px var(--color-principal-oscuro);
 
 }
 
 
 .container-eslogan-about {
     display: flex;
-    padding: 0 auto;
+    padding: 40px;
     align-items: center;
     justify-content: center;
     height: auto;
+    background-color: var(--color-fondo-oscuro);
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.08);
 
 
 }
@@ -812,5 +816,5 @@ body {
     font-size: 1.5rem;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 2.0;
 }
