@@ -779,10 +779,38 @@ body {
 
 /** Sección "Quienes somos"**/
 
-.title-quienes-somos {
+.section-about {
+    /* background-color: rgb(242, 240, 237); */
+    margin-bottom: 1000px;
+}
+
+.title-about {
     color: var(--color-principal-oscuro);
     position: relative;
     text-align: center;
     font-size: 2.2rem;
     font-family: "Poppins", sans-serif;
+    margin-bottom: 150px;
+
+}
+
+
+.container-eslogan-about {
+    display: flex;
+    padding: 0 auto;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+
+
+}
+
+.eslogan-about {
+    color: var(--color-principal-oscuro);
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
 }
