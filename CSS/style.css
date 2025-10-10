@@ -16,11 +16,13 @@
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     scroll-behavior: smooth;
+
 }
 
 body {
     background: var(--color-fondo-claro);
     color: var(--color-texto);
+
 }
 
 
@@ -793,6 +795,7 @@ body {
     font-size: 2.2rem;
     font-family: "Poppins", sans-serif;
     border-right: solid 2px var(--color-principal-oscuro);
+    padding: 10px;
 
 }
 
@@ -817,4 +820,25 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     line-height: 2.0;
+    margin-left: 20px;
 }
+
+.container-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+.text-about {}
+
+.text-about>h4 {
+    font-size: 2.0rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: var(--color-principal);
+    align-items: center;
+}
+
+.carrousel-about {}
