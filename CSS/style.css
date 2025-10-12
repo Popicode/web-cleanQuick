@@ -18,9 +18,6 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     scroll-behavior: smooth;
     transition: color .2s ease, background-color .2s ease, box-shadow .2s ease, transform .2s ease;
-
-
-
 }
 
 body {
@@ -76,7 +73,7 @@ body {
 
 .nav-link:hover {
     background-color: var(--color-hover-claro);
-    color: var(--color-texto);
+    color: var(--color-principal-oscuro);
     border-radius: 100px;
 }
 
@@ -791,7 +788,6 @@ body {
 
 .section-about {
     /* background-color: #F8F4FD; */
-    padding-bottom: 1000px;
     margin-top: 100px;
 }
 
@@ -814,9 +810,6 @@ body {
     height: auto;
     background-color: var(--color-fondo-oscuro);
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.08);
-
-
-
 }
 
 .eslogan-about {
@@ -836,8 +829,11 @@ body {
     gap: 8px;
     justify-items: center;
     align-items: stretch;
-    /* background: linear-gradient(135deg, #f8f4fb 0%, #faf7f2 100%); */
+    background-image: url(../imagenes/fondos/fondo-aboutUs.png);
     padding: 10rem;
+    background-position: center -180px;
+    margin-top: 130px;
+    padding-bottom: 500px;
 }
 
 .text-about {
@@ -852,17 +848,26 @@ body {
     font-size: 4.0rem;
     font-family: "Asap", sans-serif;
     font-weight: 600;
-    color: var(--color-acento);
+    color: var(--color-principal);
     align-items: center;
     padding: 30px;
 }
 
 .text-about>p {
-    font-size: 1.1rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
     line-height: 1.6;
-    color: #3b3b3b;
-    font-weight: 500;
+    color: var(--color-texto--principal);
+    font-weight: 300;
 
+}
+
+.text-about>p>span {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--color-principal);
+    font-weight: 300;
 }
 
 .image1-about {
@@ -871,5 +876,5 @@ body {
     height: 340px;
     border-radius: 90px;
     max-width: fit-content;
-    margin-left: 100px;
+    margin-left: 200px;
 }
