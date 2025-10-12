@@ -784,7 +784,7 @@ body {
 }
 
 
-/** Sección "Quienes somos"**/
+/** Sección "About Us"**/
 
 .section-about {
     /* background-color: #F8F4FD; */
@@ -839,9 +839,6 @@ body {
 .text-about {
     max-width: 1200px;
     height: auto;
-
-
-
 }
 
 .text-about>h4 {
@@ -877,4 +874,54 @@ body {
     border-radius: 90px;
     max-width: fit-content;
     margin-left: 200px;
+}
+
+/*? Media querys para sección "About Us*/
+
+@media (min-width:768px) and (max-width: 1025px) {
+    .container-about {
+        background-position: center -250px;
+
+    }
+
+    .text-about>h4 {
+        margin-bottom: 20px;
+        font-size: 3.2rem;
+        max-width: fit-content;
+        padding: 0;
+
+    }
+
+    .text-about>p {
+        font-size: 1.1rem;
+    }
+
+    .text-about>p>span {
+        font-size: 1.1rem;
+    }
+
+    .image1-about {
+        position: absolute;
+        right: 70px;
+        height: 250px;
+        border-radius: 70px;
+        width: auto;
+        margin-left: 0;
+
+
+    }
+}
+
+@media(max-width: 768px) {
+    .container-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        padding: 0 auto;
+        background-image: url(../imagenes/fondos/fondo-about-movil.png);
+        margin-top: 0;
+
+    }
+
 }
