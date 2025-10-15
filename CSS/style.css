@@ -911,17 +911,3 @@ body {
 
     }
 }
-
-@media(max-width: 768px) {
-    .container-about {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0;
-        padding: 0 auto;
-        background-image: url(../imagenes/fondos/fondo-about-movil.png);
-        margin-top: 0;
-
-    }
-
-}
