@@ -2,6 +2,7 @@
     --color-principal: #8E2DE2;
     --color-principal-oscuro: #5A189A;
     --color-acento: #C77DFF;
+    --color-fondo-blanco: #fcfdfe;
     --color-fondo-claro: #F8F9FA;
     --color-fondo-oscuro: #F3EEFB;
     --color-fondo-intermedio: #F8F4FB;
@@ -21,9 +22,7 @@
 }
 
 body {
-    background: var(--color-fondo-claro);
-    color: var(--color-texto);
-
+    background-color: var(--color-fondo-blanco);
 }
 
 
@@ -874,100 +873,4 @@ body {
     border-radius: 90px;
     max-width: fit-content;
     margin-left: 200px;
-}
-
-/*? Media querys para sección "About Us*/
-
-@media (min-width:768px) and (max-width: 1025px) {
-    .container-about {
-        background-position: center -250px;
-
-    }
-
-    .text-about>h4 {
-        margin-bottom: 20px;
-        font-size: 3.2rem;
-        max-width: fit-content;
-        padding: 0;
-
-    }
-
-    .text-about>p {
-        font-size: 1.1rem;
-    }
-
-    .text-about>p>span {
-        font-size: 1.1rem;
-    }
-
-    .image1-about {
-        position: absolute;
-        right: 70px;
-        height: 250px;
-        border-radius: 70px;
-        width: auto;
-        margin-left: 0;
-
-
-    }
-}
-
-@media (max-width: 768px) {
-    .container-about {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        background-image: url(../imagenes/fondos/fondo-definitivo.png);
-        margin-top: 0;
-        min-height: 90vh;
-        padding: 4rem 1.5rem;
-        justify-content: space-between;
-        /* border-radius: 80px 80px; */
-
-
-    }
-
-    .container-eslogan-about {
-        padding: 25px;
-        border-radius: 64px 120px;
-        margin-bottom: 2rem;
-    }
-
-    .title-about {
-        font-size: 2rem;
-        padding: 10px;
-    }
-
-    .eslogan-about {
-        font-size: 1.2rem;
-    }
-
-    .text-about {
-        text-align: center;
-        max-width: 90%;
-    }
-
-    .text-about>h4 {
-        padding: 0;
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .text-about>p {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: var(--color-texto--principal);
-    }
-
-    .text-about>p>span {
-        font-size: 1rem;
-    }
-
-    .image1-about {
-        width: fit-content;
-        max-width: 100px;
-        border-radius: 40px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    }
 }
