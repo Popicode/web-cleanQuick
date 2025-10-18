@@ -732,7 +732,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: var(--color-fondo-claro);
+    background: var(--color-fondo-blanco);
     font-size: 1.1rem;
     padding: 1.0rem;
     max-width: 350px;
@@ -762,7 +762,6 @@ body {
 
     .como-funciona {
         max-width: 420px;
-        border-radius: 2px;
     }
 
     .service-media {
