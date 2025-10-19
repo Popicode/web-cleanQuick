@@ -630,13 +630,6 @@ body {
     font-size: 29px;
 }
 
-/* .subtitle-modal {
-    display: flex;
-    font-family: "Poppins", sans-serif;
-    justify-content: center;
-    color: var(--color-principal-oscuro);
-} */
-
 .formulario-modal {
     display: grid;
     grid-template-columns: 1fr;
@@ -779,4 +772,158 @@ body {
     .como-funciona {
         max-width: 100%;
     }
+}
+
+
+/** Sección "Contacto" */
+.contact-section {
+    display: flex;
+    padding: 6rem 4rem;
+    justify-content: center;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Columna izq-formulario*/
+.contact-form-block {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-title {
+    font-family: "Asap", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.contact-title>span {
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+.contact-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    color: var(--color-principal-oscuro);
+    margin-bottom: 2rem;
+}
+
+.formulario-contacto {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.formulario-contacto label {
+    font-size: 15px;
+    color: var(--color-principal-oscuro);
+    font-family: "Poppins", sans-serif;
+}
+
+.formulario-contacto input {
+    font-family: "Poppins", sans-serif;
+    padding: 7px;
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--color-principal-oscuro);
+    font-size: 14px;
+    border-bottom: 2px solid var(--color-principal-oscuro);
+    transition: border-color 0.3s ease;
+}
+
+.select-contacto {
+    font-family: "Poppins" sans-serif;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 7px 7px;
+    outline: none;
+    color: var(--color-principal-oscuro);
+    font-size: 14px;
+    border-bottom: 2px solid var(--color-principal-oscuro);
+    cursor: pointer;
+
+}
+
+.select-contacto>option {
+    font-family: "Poppins";
+}
+
+
+
+.formulario-contacto input:focus,
+.formulario-contacto select:focus {
+    border-bottom-color: var(--color-principal)
+}
+
+.contact-btn {
+    background: var(--color-principal);
+    color: var(--color-texto-inverso);
+    border: none;
+    padding: 0.9rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background-color: var(--color-principal-oscuro);
+    transform: scale(1.03);
+}
+
+/* column derecha-info*/
+.contact-info-block {
+    background-color: var(--color-fondo-intermedio);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2px solid var(--color-principal-oscuro);
+    margin-left: 2rem;
+}
+
+.info-title {
+    font-family: "Poppins", sans-serif;
+    color: var(--color-principal-oscuro);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-list {
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-texto--principal);
+    margin-bottom: 2rem;
+}
+
+.info-extra p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    color: var(--color-texto--principal);
+    line-height: 1.6;
+    margin-bottom: 0.4rem;
+}
+
+.contact-image {
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
