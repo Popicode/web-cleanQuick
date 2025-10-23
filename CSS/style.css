@@ -780,6 +780,7 @@ body {
     display: flex;
     padding: 6rem 4rem;
     justify-content: center;
+
 }
 
 .contact-container {
@@ -816,7 +817,7 @@ body {
 .contact-subtitle {
     font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
-    color: var(--color-principal-oscuro);
+    color: var(--color-texto--principal);
     margin-bottom: 2rem;
 }
 
@@ -888,7 +889,7 @@ body {
 
 /* column derecha-info*/
 .contact-info-block {
-    background-color: var(--color-fondo-intermedio);
+    background-color: var(--color-fondo-claro);
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -904,21 +905,12 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.info-list {
+.info-list>li {
     list-style: none;
     font-family: "Poppins", sans-serif;
-    font-size: 1rem;
+    font-size: 0.93rem;
     line-height: 1.8;
     color: var(--color-texto--principal);
-    margin-bottom: 2rem;
-}
-
-.info-extra p {
-    font-family: "Poppins", sans-serif;
-    font-size: 0.95rem;
-    color: var(--color-texto--principal);
-    line-height: 1.6;
-    margin-bottom: 0.4rem;
 }
 
 .contact-image {
