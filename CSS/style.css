@@ -217,6 +217,7 @@ body {
 }
 
 .hero-card {
+    text-decoration: none;
     background-color: var(--color-principal-oscuro);
     color: var(--color-texto-inverso);
     padding: 2rem;
@@ -249,10 +250,12 @@ body {
     font-size: 20px;
     color: var(--color-texto-inverso);
     padding-bottom: 8px;
+
 }
 
 .hero-subtitle {
     font-size: 30px;
+
 }
 
 .highlight-bg {
