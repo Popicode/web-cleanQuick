@@ -919,3 +919,14 @@ body {
     margin-top: 2rem;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
+
+/*? Media querie de "Contacto"*/
+
+@media (767px <=width <=1200px) {
+    .contact-section {
+        padding: 3rem 2rem;
+    }
+
+}
+
+@media (425px <=width <=767px) {}
