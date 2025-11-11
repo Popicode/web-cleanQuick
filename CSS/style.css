@@ -793,8 +793,10 @@ body {
     max-width: 1200px;
     width: 100%;
     border-radius: 30px;
+    margin: 0 auto;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Columna izq-formulario*/
@@ -932,4 +934,29 @@ body {
 
 }
 
-@media (425px <=width <=767px) {}
+@media (width <=767px) {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 auto;
+
+    }
+
+    .contact-title {
+        font-size: 2.1rem;
+    }
+
+    .contact-subtitle {
+        font-size: 1rem;
+    }
+
+    .contact-info-block {
+        border: none;
+        display: none;
+    }
+
+    .contact-btn {
+        margin-top: 1rem;
+    }
+
+}
