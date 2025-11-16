@@ -783,6 +783,7 @@ body {
     display: flex;
     padding: 6rem 4rem;
     justify-content: center;
+    margin-bottom: 4rem;
 
 }
 
@@ -960,3 +961,5 @@ body {
     }
 
 }
+
+/* Sección footer*/
