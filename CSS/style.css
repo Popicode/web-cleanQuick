@@ -432,6 +432,7 @@ body {
     align-items: stretch;
     color: var(--color-principal-oscuro);
     font-size: 1.3rem;
+    margin-bottom: 5rem;
 
 }
 
@@ -720,7 +721,8 @@ body {
     height: fit-content;
     margin: 0 auto;
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.08);
-    border-radius: 70px
+    border-radius: 70px;
+    margin-bottom: 5rem;
 }
 
 .como-funciona {
