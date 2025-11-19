@@ -783,7 +783,7 @@ body {
     display: flex;
     padding: 6rem 4rem;
     justify-content: center;
-    margin-bottom: 4rem;
+    margin-bottom: 12rem;
 
 }
 
@@ -965,7 +965,21 @@ body {
 /* Sección footer*/
 .footer-section {
     background-color: #211d4a;
-    color: var(--color-texto-inverso)
+    color: var(--color-texto-inverso);
+    padding: 2rem 6rem;
+}
+
+.footer-eslogan {
+    display: flex;
+    background-color: var(--color-fondo-intermedio);
+    color: var(--color-texto--principal);
+    border-radius: 20px;
+    padding: 50px;
+    transform: translateY(-60px);
+    margin: 0 auto;
+    max-width: 1000px;
+
+
 }
 
 .footer-logo {
