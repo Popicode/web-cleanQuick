@@ -9,6 +9,7 @@
     --color-texto-inverso: #FFFFFF;
     --color-hover-claro: #EDE7F6;
     --color-texto--principal: #3b3b3b;
+    --color-texto--footer: #9a9ca2;
 }
 
 /**  Reset general */
@@ -1034,7 +1035,7 @@ body {
 .footer-container {
     display: grid;
     /*? Aqui fraccionamos las 4 columnas con espacios diferentes*/
-    grid-template-columns: 1.3fr 1fr 1fr 0.8fr;
+    grid-template-columns: 2fr 1.5fr 1.5fr;
     padding-top: 100px;
     padding-bottom: 60px;
     margin: 0 auto;
@@ -1048,6 +1049,7 @@ body {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
+
 }
 
 .footer-lista {
@@ -1062,6 +1064,8 @@ body {
     /* eliminamos estilos nativos del los enlaces*/
     display: inline-block;
     padding-top: 10px;
+    color: var(--color-texto--footer);
+
 
 }
 
