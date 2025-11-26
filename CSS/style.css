@@ -977,13 +977,13 @@ body {
     justify-content: space-between;
     /*? Separa los contenedores*/
     align-items: center;
-    background-color: #C1B7E9;
-    color: var(--color-texto--principal);
+    background-color: #8386D0;
+    color: var(--color-texto-inverso);
     padding: 30px;
     transform: translateY(-60px);
     margin: 0 auto;
     max-width: 1000px;
-    box-shadow: -15px -20px 3px rgba(104, 101, 101, 0.22);
+    box-shadow: -15px -20px 3px rgba(104, 101, 101, 0.20);
 }
 
 .footer-eslogan-col1 {
@@ -995,7 +995,7 @@ body {
 .eslogan-f-title {
     font-family: "Asap", sans-serif;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 1.2px;
     margin-bottom: 10px;
 }
@@ -1003,8 +1003,8 @@ body {
 .eslogan-f-subtitle {
     font-family: "Asap", sans-serif;
     font-size: 20px;
-    font-weight: 500;
-    color: var(--color-principal);
+    font-weight: 400;
+    color: var(--color-texto--principal);
 }
 
 
@@ -1015,9 +1015,64 @@ body {
 }
 
 .eslogan-f-btn {
-    padding: 10px;
+    padding: 20px 40px;
+    background-color: var(--color-texto--principal);
+    color: var(--color-texto-inverso);
+    font-size: 17px;
+    font-family: 'Asap', sans-serif;
+    border: none;
+    transition: all 0.3s ease-in-out;
 }
 
+.eslogan-f-btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+
+}
+
+/* Column del footer*/
+.footer-container {
+    display: grid;
+    /*? Aqui fraccionamos las 4 columnas con espacios diferentes*/
+    grid-template-columns: 1.3fr 1fr 1fr 0.8fr;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+    column-gap: 60px;
+    align-items: start;
+}
+
+/* Title de todas las columnas*/
+.footer-col-title {
+    font-family: 'Asap', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-lista {
+    list-style-type: none;
+}
+
+.enlaces-footer {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+    list-style-type: none;
+    /* eliminamos estilos nativos del los enlaces*/
+    display: inline-block;
+    padding-top: 10px;
+
+}
+
+
+/*col1*/
+
 .footer-logo {
-    max-width: 120px;
+    margin-top: -30px;
+    max-width: 250px;
+}
+
+.footer-marca {
+    margin-left: 20px;
 }
