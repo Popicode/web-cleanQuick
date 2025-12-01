@@ -786,7 +786,7 @@ body {
     display: flex;
     padding: 6rem 4rem;
     justify-content: center;
-    margin-bottom: 12rem;
+    margin-bottom: 15rem;
 
 }
 
@@ -1097,4 +1097,9 @@ body {
     width: 50px;
     text-decoration: none;
     height: 50px;
+    transition: transform 0.5s ease;
+}
+
+.icon:hover {
+    transform: rotate(45deg);
 }
