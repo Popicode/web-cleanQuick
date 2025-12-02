@@ -1,5 +1,7 @@
-const dotenv = require('dotenv').config()
-const express = require('express')
+import dotenv from 'dotenv';
+import express from 'express'
+
+dotenv.config()
 const app = express()
 
-
+console.log('Hola mundo')
