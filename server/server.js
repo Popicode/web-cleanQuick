@@ -1,14 +1,16 @@
 import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
 import { healthCheck } from './controllers/health.controller.js';
-dotenv.config();
+
 
 const app = express();
-
 const PORT = Number(process.env.PORT ?? 3000);
 
 app.use(express.json());
 app.use(express.text());
+
+//rutas
 app.use('/api', healthCheck)
 
 
