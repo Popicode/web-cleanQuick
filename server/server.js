@@ -1,7 +1,11 @@
 import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
-import { healthCheck } from './controllers/health.controller.js';
+
+import HealthRoutes from "./routes/health.routes.js"
+import ContactRoutes from "./routes/contact.routes.js"
+
+
 
 
 const app = express();
@@ -11,7 +15,8 @@ app.use(express.json());
 app.use(express.text());
 
 //rutas
-app.use('/api', healthCheck)
+app.use('/api', HealthRoutes)
+app.use('/api', ContactRoutes)
 
 
 
