@@ -6,4 +6,5 @@ export function healthCheck(req, res) {
     });
 }
 
-// end point de prueba que responde al navegador
+// end point de prueba que responde al navegador 
+

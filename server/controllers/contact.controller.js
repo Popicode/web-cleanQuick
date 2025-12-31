@@ -1,10 +1,2 @@
-export function crearContacto(req, res) {
-    const data = req.body;
+import { validateContact } from "../utils/validateContact";
 
-
-    res.status(200).json({
-        status: "ok",
-        message: "Contacto recibido",
-        data
-    })
-}
