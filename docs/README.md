@@ -16,6 +16,7 @@ Por el momento la estructura iría de la siguiente manera:
 - `CSS/`: contiene los estilos (`style.css`)
 - `JS/`: contiene el script (`script.js`)
 - `imagenes/`: contiene imágenes utilizadas en el sitio.
+- `server/`: contiene las rutas, controladores, servicios y controladores del backend.
 
 Se diseñara para desktop primero y luego se hara responsivo para todas las pantallas.
 
