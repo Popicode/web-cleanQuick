@@ -1114,6 +1114,7 @@ body {
         padding: 10px;
         max-width: none;
         margin-bottom: 2rem;
+        border-radius: 20px;
     }
 
     .eslogan-f-title {
@@ -1132,6 +1133,7 @@ body {
     .eslogan-f-btn {
         padding: 10px 20px;
         font-size: 0.8rem;
+        border-radius: 10px;
     }
 
     /*colum del footer*/
