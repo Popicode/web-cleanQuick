@@ -284,18 +284,15 @@ body {
 }
 
 /*? Media query para tablets*/
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .hero {
-        justify-content: flex-start;
-        align-items: center;
         padding: 15% 5% 0 5%;
         flex-direction: column;
     }
 
     .hero-text-block {
         border-left: 2px solid var(--color-principal-oscuro);
-        margin-bottom: 7rem;
-        margin-top: 2rem;
+        max-width: 500px;
     }
 
     .eslogan-hero {
@@ -328,10 +325,8 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 769px) {
     .hero {
-        justify-content: flex-start;
-        align-items: center;
         padding: 15% 5% 0 5%;
         flex-direction: column;
     }
@@ -340,7 +335,8 @@ body {
         margin-bottom: 1.4rem;
         border-left: 2px solid var(--color-principal-oscuro);
         margin-bottom: 7rem;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        max-width: 450px;
     }
 
     .eslogan-hero {
@@ -368,12 +364,10 @@ body {
         font-size: 20px;
     }
 
-    .hero-frase {
-        display: none;
-    }
+
 }
 
-@media (max-width: 375px) {
+@media (max-width: 426px) {
     .hero {
         justify-content: flex-start;
         align-items: center;
@@ -385,15 +379,14 @@ body {
         margin-bottom: 1.4rem;
         border-left: 2px solid var(--color-principal-oscuro);
         margin-bottom: 7rem;
-        margin-top: 2rem;
     }
 
     .eslogan-hero {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .eslogan-hero2 {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .hero-card {
@@ -413,8 +406,14 @@ body {
         font-size: 20px;
     }
 
-    .hero-frase {
-        display: none;
+
+
+    .highlight-bg::after {
+        content: "🧼";
+        display: inline-block;
+        margin-left: 0.2rem;
+        animation: floatUp 2s ease-in-out infinite;
+        font-size: 0.7em;
     }
 }
 
