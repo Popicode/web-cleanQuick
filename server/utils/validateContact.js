@@ -5,10 +5,10 @@ export function validateContact(payload) {
 
     // normalizar valores entrantes
 
-    const name = (payload?.name ?? "").strim();
-    const email = (payload?.email ?? "").strim();
-    const tel = (payload?.tel ?? "").strim();
-    const servicios = (payload?.servicios ?? "").strim();
+    const name = (payload?.name ?? "").trim();
+    const email = (payload?.email ?? "").trim();
+    const tel = (payload?.tel ?? "").trim();
+    const servicios = (payload?.servicios ?? "").trim();
 
     if (!name) errors.push('El nombre es obligatorio')
     else if (name.length < 3) errors.push('El nombre tiene que tener como minimo 3 caracteres');
