@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer'
 
-export function createTransporter() {
+export async function createTransporter() {
     const host = process.env.SMTP_HOST;
     const port = Number(process.env.SMTP_PORT);
     const secure = process.env.SMTP_SECURE === 'true';
@@ -17,5 +17,5 @@ export function createTransporter() {
         port,
         secure,
         auth: { user, pass }
-    })
+    });
 }

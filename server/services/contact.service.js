@@ -1,23 +1,23 @@
 import { createTransporter } from '../services/mailer.js'
 
 export async function procesarSolicitudContacto(data) {
-    const transporter = createTransporter();
+    const transporter = await createTransporter();
 
-    const mailTo = process.env.MAIL_TO;
+    const to = process.env.MAIL_TO;
     const from = process.env.MAIL_FROM || process.env.SMTP_USER; // usa uno o usa el otro
 
-    if (!mailTo) {
+    if (!to) {
         throw new Error('Error, falta MAIL_TO en el entorno (.env)')
-    };
+    }
 
-    const asunto = `Nueva solicitud ${data.servicios}`
+    const subject = `Nueva solicitud ${data.servicios}`
     const text = buildText(data);
     const html = buildHtml(data);
 
     const info = await transporter.sendMail({
         from,
-        mailTo,
-        asunto,
+        to,
+        subject,
         text,
         html
     });
@@ -34,7 +34,7 @@ function buildText(data) {
         `Nombre : ${data.name}`,
         `Email : ${data.email}`,
         `Tel : ${data.tel}`,
-        `Servicio : ${data.servicio}`
+        `Servicio : ${data.servicios}`
     ].join("\n")
 };
 
