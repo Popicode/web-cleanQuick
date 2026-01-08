@@ -12,7 +12,7 @@ export async function createTransporter() {
         throw new Error('Faltan variables de entorno en (.env)')
     }
 
-    return nodemailer.createTestAccount({
+    return nodemailer.createTransport({
         host,
         port,
         secure,
