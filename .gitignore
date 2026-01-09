@@ -1,1 +1,5 @@
 #? Este archivo sirve para indicarle a git que archivos no debe subir
+
+.env
+node_modules
+docu.txt
