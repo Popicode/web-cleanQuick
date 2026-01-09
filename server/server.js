@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
+import "dotenv/config"
 
 import HealthRoutes from "./routes/health.routes.js"
 import ContactRoutes from "./routes/contact.routes.js"
