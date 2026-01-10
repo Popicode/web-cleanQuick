@@ -2,14 +2,14 @@ import { validateContact } from "../utils/validateContact.js"
 import { procesarSolicitudContacto } from "../services/contact.service.js"
 
 export async function crearContacto(req, res) {
-    const resultado = validateContact(req.body);
 
+    const resultado = validateContact(req.body);
     if (!resultado.isValid) {
         return res.status(400).json({
             status: "error",
             errors: resultado.errors
         });
-    }
+    };
 
     try {
         const serviceResultado = await procesarSolicitudContacto(resultado.clean)
