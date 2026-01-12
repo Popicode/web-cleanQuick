@@ -12,7 +12,7 @@ import ContactRoutes from "./routes/contact.routes.js"
 const app = express();
 const PORT = Number(process.env.PORT ?? 3000);
 
-// midelware basicos 
+// midelware basicos de parseo de datos
 app.use(express.json());
 app.use(express.text());
 
