@@ -36,7 +36,7 @@ app.use(errorHandler);
 
 
 app.listen(PORT, () =>
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`Servidor corriendo en http://localhost:${PORT}`)
 );
 
 
