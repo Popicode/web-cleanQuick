@@ -1,4 +1,3 @@
-import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import "dotenv/config"
@@ -20,7 +19,7 @@ app.use(express.json());
 app.use(express.text());
 
 // CORS
-app.use(process.env.CORS_ORIGIN);
+
 
 //rutas
 app.use('/api', HealthRoutes);
