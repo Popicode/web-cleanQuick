@@ -1,21 +1,3 @@
-// function errorHandler(err, req, res, next) {
-
-//     const nodeEnv = process.env.NODE_ENV;
-
-//     if (err.isOperational === true) {
-//         const status = err.statusCode
-//         const message = err.message
-//         const code = err.code
-//     } else {
-//         const status = 500
-//         if (nodeEnv === "production") {
-//             const message = "Error interno del servidor"
-//         } else {
-//             const message = err.message
-//         }
-//     };
-// }
-
 function errorHandler(err, req, res, next) {
 
     const nodeEnv = process.env.NODE_ENV;
@@ -23,7 +5,6 @@ function errorHandler(err, req, res, next) {
     let status;
     let message;
     let code;
-
 
     if (err.isOperational === true) {
         status = err.statusCode;
@@ -49,7 +30,6 @@ function errorHandler(err, req, res, next) {
     if (nodeEnv !== "production") {
         response.stack = err.stack
     };
-
 
     res.status(status).json(response);
 }
