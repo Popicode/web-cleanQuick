@@ -1,6 +1,8 @@
+import dotenv from 'dotenv';
+import path from 'path';
+dotenv.config({ path: './config/.env' });
 
 import express from 'express';
-import "dotenv/config"
 import HealthRoutes from "./routes/health.routes.js"
 import ContactRoutes from "./routes/contact.routes.js"
 import notFound from "./middlewares/notFound.js"
@@ -9,6 +11,8 @@ import corsMiddleware from "./middlewares/cors.js"
 
 const app = express();
 const PORT = Number(process.env.PORT ?? 3000);
+
+
 
 // midelware basicos de parseo de datos
 app.use(express.json());
