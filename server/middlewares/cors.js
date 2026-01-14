@@ -7,7 +7,7 @@ const allowedOrigins = varOriginCors
     .map((o) => o.trim())
     .filter(Boolean);
 
-export function corsMiddleware(req, res, next) {
+export default function corsMiddleware(req, res, next) {
 
     const origin = req.headers.origin;
 

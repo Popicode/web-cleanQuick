@@ -1,6 +1,6 @@
 import AppError from "../utils/AppError.js"
 
-export function notFound(req, res, next) {
+export default function notFound(req, res, next) {
     const error = new AppError(
         404,
         "Ruta no encontrada",
