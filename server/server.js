@@ -15,8 +15,7 @@ const PORT = Number(process.env.PORT ?? 3000);
 
 
 // midelware basicos de parseo de datos
-app.use(express.json());
-app.use(express.text());
+app.use(express.json({ limit: "10kb" }));
 
 // CORS
 app.use(corsMiddleware);
