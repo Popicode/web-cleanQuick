@@ -3,6 +3,8 @@ import path from 'path';
 dotenv.config({ path: './config/.env' });
 
 import express from 'express';
+import helmet from 'helmet';
+import { apiLimiter } from './middlewares/rateLimiter.js';
 import HealthRoutes from "./routes/health.routes.js"
 import ContactRoutes from "./routes/contact.routes.js"
 import notFound from "./middlewares/notFound.js"
@@ -13,12 +15,17 @@ const app = express();
 const PORT = Number(process.env.PORT ?? 3000);
 
 
+app.use(helmet());
 
-// midelware basicos de parseo de datos
-app.use(express.json({ limit: "10kb" }));
+
+app.use(express.json({ limit: '10kb' }));
+
 
 // CORS
 app.use(corsMiddleware);
+
+// rate limit para la api en general
+app.use('/api', apiLimiter);
 
 //rutas
 app.use('/api', HealthRoutes);
