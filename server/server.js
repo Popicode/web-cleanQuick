@@ -36,6 +36,20 @@ const serverOn = app.listen(PORT, () =>
     console.log(`Servidor corriendo en http://localhost:${PORT}`)
 );
 
+process.on('unhandledRejection', (reason) => {
+    console.error('Unhandled Rejection:', reason);
+
+
+    serverOn.close(() => {
+        process.exit(1)
+    });
+});
+
+process.on("uncaughtException", (err) => {
+    console.error("Uncaught Exception:", err);
+    process.exit(1);
+});
+
 
 
 
