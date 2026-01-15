@@ -32,7 +32,7 @@ app.use(notFound);
 app.use(errorHandler);
 
 
-app.listen(PORT, () =>
+const serverOn = app.listen(PORT, () =>
     console.log(`Servidor corriendo en http://localhost:${PORT}`)
 );
 
