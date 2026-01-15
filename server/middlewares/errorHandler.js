@@ -27,7 +27,7 @@ export default function errorHandler(err, req, res, next) {
     if (code) {
         response.code = code
     }
-    if (nodeEnv !== "production") {
+    if (nodeEnv === "development") {
         response.stack = err.stack
     };
 

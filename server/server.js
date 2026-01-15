@@ -15,13 +15,14 @@ import corsMiddleware from "./middlewares/cors.js"
 const app = express();
 const PORT = Number(process.env.PORT ?? 3000);
 
-
+// validación de SMTP antes de correr el sv
 try {
     validateSMTPConfig();
 } catch (error) {
     console.error(error.message);
     process.exit(1);
 }
+
 
 app.use(helmet());
 
