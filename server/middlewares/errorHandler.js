@@ -1,6 +1,6 @@
 export default function errorHandler(err, req, res, next) {
 
-    const nodeEnv = process.env.NODE_ENV;
+    const nodeEnv = process.env.NODE_ENV || "production"
 
     let status;
     let message;

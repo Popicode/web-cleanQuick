@@ -11,7 +11,16 @@ export default function corsMiddleware(req, res, next) {
 
     const origin = req.headers.origin;
 
-    if (!origin) return next();
+    if (allowedOrigins.length === 0) {
+        if (origin) {
+            return next(new AppError(403, "CORS no configurado", "CORS_NOT_CONFIGURED"))
+        }
+        return next()
+    }
+
+    if (!origin) {
+        return next(new AppError(403, "CORS requiere header origin", "CORS_ORIGIN_REQUIRED"))
+    }
 
     if (!allowedOrigins.includes(origin)) {
         return next(new AppError(403, "CORS bloqueado", "CORS_BLOQUED"));
