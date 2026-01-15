@@ -1,10 +1,11 @@
 import dotenv from 'dotenv';
-import path from 'path';
+
 dotenv.config({ path: './config/.env' });
 
 import express from 'express';
 import helmet from 'helmet';
 import { apiLimiter } from './middlewares/rateLimiter.js';
+import { validateSMTPConfig } from './services/mailer.js';
 import HealthRoutes from "./routes/health.routes.js"
 import ContactRoutes from "./routes/contact.routes.js"
 import notFound from "./middlewares/notFound.js"
@@ -15,9 +16,16 @@ const app = express();
 const PORT = Number(process.env.PORT ?? 3000);
 
 
+try {
+    validateSMTPConfig();
+} catch (error) {
+    console.error(error.message);
+    process.exit(1);
+}
+
 app.use(helmet());
 
-
+// parsea y pone limite de kb
 app.use(express.json({ limit: '10kb' }));
 
 
