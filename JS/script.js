@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //? Esto agrega la clase activo al menu-toggle // abre y cierra el boton 
     toggleBtn.addEventListener("click", () => {
         navBar.classList.toggle("activo");
+        toggleBtn.classList.toggle("active");
 
         //? Esto facilita a los lectores de pantalla, actualiza a true o false dependiendo si el menu esta abierto o no
         const expanded = navBar.classList.contains('activo');
@@ -38,8 +39,27 @@ document.addEventListener("DOMContentLoaded", function () {
     navLink.forEach(navLink => {
         navLink.addEventListener("click", () => {
             navBar.classList.remove("activo");
+            toggleBtn.classList.remove("active");
             toggleBtn.setAttribute("aria-expanded", "false")
         })
+    })
+
+    //? Cerrar el menú al hacer clic fuera de él
+    document.addEventListener("click", (e) => {
+        if (!navBar.contains(e.target) && !toggleBtn.contains(e.target) && navBar.classList.contains("activo")) {
+            navBar.classList.remove("activo");
+            toggleBtn.classList.remove("active");
+            toggleBtn.setAttribute("aria-expanded", "false");
+        }
+    })
+
+    //? Cerrar el menú con la tecla ESC
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && navBar.classList.contains("activo")) {
+            navBar.classList.remove("activo");
+            toggleBtn.classList.remove("active");
+            toggleBtn.setAttribute("aria-expanded", "false");
+        }
     })
 
     //? Observador para animar la linea del titulo en sección servicios
