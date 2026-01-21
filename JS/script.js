@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLink = document.querySelectorAll(".nav-link");
     const titleServicios = document.querySelector(".services-grid > h2");
     const buttonsModalOpen = document.querySelectorAll(".open-modal");
-    const modalOverlay = document.querySelector(".modal-overlay")
-    const closeModal = document.querySelector(".close-modal")
+    const modalOverlay = document.querySelector(".modal-overlay");
+    const closeModal = document.querySelector(".close-modal");
+    const form = document.querySelector(".formulario-contacto");
 
 
 
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             modalOverlay.showModal()
         })
     })
-    //* Cerrar modal
+
     closeModal.addEventListener("click", () => {
         modalOverlay.close()
     })
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    //? Cerrar el menú con la tecla ESC
+    //? Cerrar el menú con escape
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && navBar.classList.contains("activo")) {
             navBar.classList.remove("activo");
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    //? Observador para animar la linea del titulo en sección servicios
+    // animación del title servicios
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -73,4 +74,59 @@ document.addEventListener("DOMContentLoaded", function () {
         threshold: 0.5
     });
     observer.observe(titleServicios)
+
+
+
+    // Enviar formulario pa el backend
+
+
+    // mensaje de form exitoso
+
+    const alertaExito = document.createElement("p");
+    alertaExito.classList.add('alerta-exito')
+    alertaExito.textContent = "Enviando"
+
+    form.appendChild(alertaExito)
+
+
+    // evitamos recargar la pagina 
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        ;
+
+        // extraer el form y los datos
+        const formData = new FormData(form);
+
+        const name = (formData.get("name") || "").toString().trim();
+        const email = (formData.get("email") || "").toString().trim();
+        const tel = (formData.get("tel") || "").toString().trim();
+        const servicios = (formData.get("servicios") || "").toString().trim();
+
+
+        const payload = {
+            name,
+            email,
+            tel,
+            servicios
+        }
+        console.log(payload)
+
+        alertaExito.classList.add('mostrar')
+
+
+        setTimeout(() => {
+            alertaExito.classList.remove('mostrar')
+        }, 3000);
+
+
+
+
+
+    })
+
+
+
+
+
 })
