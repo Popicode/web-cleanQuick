@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".formulario-contacto");
 
 
-
     //* for each para recorrer todos los botones para abrir el
     //* modal overlay, "modal" es solo una referencia a los botones
     buttonsModalOpen.forEach(modal => {
@@ -84,7 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const alertaExito = document.createElement("p");
     alertaExito.classList.add('alerta-exito')
-    alertaExito.textContent = "Enviando"
+    alertaExito.textContent = "Enviando.."
+
 
     form.appendChild(alertaExito)
 
