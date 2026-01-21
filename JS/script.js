@@ -1,4 +1,4 @@
-
+import { mostrarAlerta } from './mostrarAlerta.js'
 
 // //?  Esperamos que el HTML este totalmente cargado para ejecutar
 document.addEventListener("DOMContentLoaded", function () {
@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(titleServicios)
 
 
-
     // Enviar formulario pa el backend
 
 
@@ -83,17 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const alertaExito = document.createElement("p");
     alertaExito.classList.add('alerta-exito')
-    alertaExito.textContent = "Enviando.."
 
 
     form.appendChild(alertaExito)
 
 
     // evitamos recargar la pagina 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        ;
 
         // extraer el form y los datos
         const formData = new FormData(form);
@@ -112,21 +109,41 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         console.log(payload)
 
-        alertaExito.classList.add('mostrar')
+        try {
+            const res = await fetch('http://localhost:3000/api/contacto', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload)
+            });
 
+            const data = await res.json()
 
-        setTimeout(() => {
-            alertaExito.classList.remove('mostrar')
-        }, 3000);
+            if (res.ok) {
+                mostrarAlerta(alertaExito, 'Formulario enviado correctamente')
+                form.reset()
+                return
+            };
 
+            if (res.status === 429) {
+                mostrarAlerta(alertaExito, data.message || "Demasiadas solicitudes, intenta más tarde", true)
+                return
+            };
 
+            if (res.status === 400) {
+                mostrarAlerta(alertaExito, data.message || 'Revisa los datos ingresados', true)
+                return
+            };
 
+            if (res.status) {
+                mostrarAlerta(alertaExito, 'Ocurrio un error inesperado, por favor intentalo nuevamente', true)
+                return
+            }
 
+        } catch (err) {
+            mostrarAlerta(alertaExito, 'Ocurrio un error inesperado', true)
+        };
 
     })
-
-
-
-
-
 })
