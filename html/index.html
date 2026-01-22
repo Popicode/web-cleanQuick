@@ -23,7 +23,9 @@
             <div class="container-navbar">
                 <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false"
                     aria-controls="nav-menu">
-                    ☰
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
                 <div class="container-logo-nabvar">
                     <img src="../imagenes/logos/logo-navbar.png" alt="Logo CleanQuick" class="logo">
@@ -38,9 +40,6 @@
 
                     <li class="container-link-nav">
                         <a class="nav-link" href="#contacto">Contacto </a>
-                    </li>
-                    <li class="container-link-nav">
-                        <a class="nav-link" href="#nosotros">Nosotros</a>
                     </li>
                 </ul>
             </div>
@@ -138,25 +137,27 @@
                 <form class="formulario-contacto">
                     <div>
                         <label for="name">Nombre completo</label>
-                        <input id="name" name="name" type="text" placeholder="Ingrese su nombre">
+                        <input id="name" name="name" type="text" placeholder="Ingrese su nombre" aria-required="true"
+                            required autocomplete="name">
                     </div>
                     <div>
                         <label for="email">Correo electronico</label>
-                        <input id="email" name="email" type="email" placeholder="Ingrese su correo">
+                        <input id="email" name="email" type="email" placeholder="Ingrese su correo" aria-required="true"
+                            required autocomplete="email">
                     </div>
                     <div>
                         <label for="tel">Telefono</label>
-                        <input id="tel" name="tel" type="tel" placeholder="Ingrese su número">
+                        <input id="tel" name="tel" type="tel" placeholder="Ingrese su número" aria-required="true"
+                            required autocomplete="tel">
                     </div>
                     <label for="servicios">Servicios</label>
                     <div>
-                        <select name="servicios" class="select-contacto">
-                            <option disabled selected>Seleccione un servicio...</option>
+                        <select name="servicios" class="select-contacto" id="servicios" aria-required="true" required>
+                            <option disabled selected value="">Seleccione un servicio...</option>
                             <option value="departamentos">Limpieza de departamentos</option>
                             <option value="vidrios">Limpieza de vidrios</option>
                             <option value="casas">Limpieza de casas</option>
                             <option value="oficinas">Limpieza de oficinas</option>
-                            <option value="post-obras">Limpieza post obras</option>
                         </select>
                     </div>
                     <button type="submit" class="contact-btn">Enviar solicitud</button>
@@ -242,6 +243,6 @@
                 </form>
         </section>
     </dialog>
-    <script src="JS/script.js"></script>
+    <script type="module" src="../JS/script.js"></script>
 
 </html>

@@ -1,4 +1,4 @@
-const servicios_validos = ['departamentos', 'vidrios', 'oficinas']
+const servicios_validos = ['departamentos', 'vidrios', 'oficinas', 'casas']
 
 export function validateContact(payload) {
     const errors = []
