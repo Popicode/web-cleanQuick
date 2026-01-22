@@ -107,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
             tel,
             servicios
         }
-        console.log(payload)
 
         try {
             const res = await fetch('http://localhost:3000/api/contacto', {

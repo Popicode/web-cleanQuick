@@ -1,4 +1,4 @@
-const mostrarAlerta = (alertaExito, mensaje, esError = false) => {
+export const mostrarAlerta = (alertaExito, mensaje, esError = false) => {
     alertaExito.classList.remove('mostrar', 'error');
     alertaExito.textContent = mensaje
 
