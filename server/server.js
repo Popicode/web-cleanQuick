@@ -10,7 +10,9 @@ import HealthRoutes from "./routes/health.routes.js"
 import ContactRoutes from "./routes/contact.routes.js"
 import notFound from "./middlewares/notFound.js"
 import errorHandler from "./middlewares/errorHandler.js"
-import corsMiddleware from "./middlewares/cors.js"
+
+// importacion dinamica para que carge luego de que dotenv sea cargado
+const corsMiddleware = (await import('./middlewares/cors.js')).default;
 
 const app = express();
 const PORT = Number(process.env.PORT ?? 3000);
@@ -23,15 +25,15 @@ try {
     process.exit(1);
 }
 
+// cors
+app.use(corsMiddleware);
 
-app.use(helmet());
+app.use(helmet({
+    crossOriginResourcePolicy: false
+}));
 
 // parsea y pone limite de kb
 app.use(express.json({ limit: '10kb' }));
-
-
-// CORS
-app.use(corsMiddleware);
 
 // rate limit para la api en general
 app.use('/api', apiLimiter);
