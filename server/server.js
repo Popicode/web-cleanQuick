@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+import validateEnv from '../config/validateEnv.js';
 
 dotenv.config({ path: './config/.env' });
 
@@ -11,13 +12,15 @@ import ContactRoutes from "./routes/contact.routes.js"
 import notFound from "./middlewares/notFound.js"
 import errorHandler from "./middlewares/errorHandler.js"
 
-// importacion dinamica para que carge luego de que dotenv sea cargado
+// import dinamic para que carge luego de dotenv (y asi lea .env)
 const corsMiddleware = (await import('./middlewares/cors.js')).default;
+
 
 const app = express();
 const PORT = Number(process.env.PORT ?? 3000);
 
-// validación de SMTP antes de correr el sv
+
+
 try {
     validateSMTPConfig();
 } catch (error) {
@@ -32,10 +35,10 @@ app.use(helmet({
     crossOriginResourcePolicy: false
 }));
 
-// parsea y pone limite de kb
+
 app.use(express.json({ limit: '10kb' }));
 
-// rate limit para la api en general
+
 app.use('/api', apiLimiter);
 
 //rutas
