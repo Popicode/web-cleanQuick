@@ -1,6 +1,14 @@
 import dotenv from 'dotenv';
 import validateEnv from '../config/validateEnv.js';
 dotenv.config({ path: './config/.env' });
+
+try {
+    validateEnv()
+} catch (error) {
+    console.log(error.message);
+    process.exit(1)
+}
+
 import express from 'express';
 import helmet from 'helmet';
 import { apiLimiter } from './middlewares/rateLimiter.js';
@@ -20,12 +28,7 @@ const app = express();
 const PORT = Number(process.env.PORT ?? 3000);
 
 
-try {
-    validateEnv()
-} catch (error) {
-    console.log(error.message);
-    process.exit(1)
-}
+
 
 try {
     validateSMTPConfig();
