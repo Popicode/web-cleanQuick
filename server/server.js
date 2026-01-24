@@ -1,8 +1,6 @@
 import dotenv from 'dotenv';
 import validateEnv from '../config/validateEnv.js';
-
 dotenv.config({ path: './config/.env' });
-
 import express from 'express';
 import helmet from 'helmet';
 import { apiLimiter } from './middlewares/rateLimiter.js';
@@ -12,6 +10,8 @@ import ContactRoutes from "./routes/contact.routes.js"
 import notFound from "./middlewares/notFound.js"
 import errorHandler from "./middlewares/errorHandler.js"
 
+
+
 // import dinamic para que carge luego de dotenv (y asi lea .env)
 const corsMiddleware = (await import('./middlewares/cors.js')).default;
 
@@ -20,6 +20,12 @@ const app = express();
 const PORT = Number(process.env.PORT ?? 3000);
 
 
+try {
+    validateEnv()
+} catch (error) {
+    console.log(error.message);
+    process.exit(1)
+}
 
 try {
     validateSMTPConfig();

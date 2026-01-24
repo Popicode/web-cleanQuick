@@ -27,14 +27,14 @@ export default function validateEnv() {
             throw new Error('CORS_ORIGIN esta vacio')
         }
 
-        const port = Number(process.env.SMPT_PORT)
+        const port = Number(process.env.SMTP_PORT)
         if (!Number.isFinite(port)) {
-            throw new Error('SMPT_PORT no es un número valido de puerto')
+            throw new Error('SMTP_PORT no es un número valido de puerto')
         }
 
-        const secureRaw = (process.env.SMPT_SECURE || '').toLowerCase();
+        const secureRaw = (process.env.SMTP_SECURE || '').toLowerCase();
         if (secureRaw && secureRaw !== 'true' && secureRaw !== 'false') {
-            throw new Error('SMPT_SECURE must be "true" or "false"')
+            throw new Error('SMTP_SECURE solo puede ser "true" or "false"')
         }
     }
 
