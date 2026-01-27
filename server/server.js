@@ -18,6 +18,7 @@ import HealthRoutes from "./routes/health.routes.js"
 import ContactRoutes from "./routes/contact.routes.js"
 import notFound from "./middlewares/notFound.js"
 import errorHandler from "./middlewares/errorHandler.js"
+import shutdown from '../config/shutdown.js';
 
 
 
@@ -66,18 +67,24 @@ const serverOn = app.listen(PORT, () =>
     console.log(`Servidor corriendo en http://localhost:${PORT}`)
 );
 
+
+process.on('SIGTERM', () => {
+    shutdown(serverOn, 'SIGTERM', 0)
+});
+
+process.on('SIGINT', () => {
+    shutdown(serverOn, 'SIGINT', 0)
+})
+
 process.on('unhandledRejection', (reason) => {
     console.error('Unhandled Rejection:', reason);
 
-
-    serverOn.close(() => {
-        process.exit(1)
-    });
+    shutdown(serverOn, 'unhandledRejection', 1)
 });
 
 process.on("uncaughtException", (err) => {
     console.error("Uncaught Exception:", err);
-    process.exit(1);
+    shutdown(serverOn, 'uncaughtException', 1)
 });
 
 
