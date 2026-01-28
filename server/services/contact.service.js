@@ -14,23 +14,18 @@ export async function procesarSolicitudContacto(data) {
     const text = buildText(data);
     const html = buildHtml(data);
 
-    try {
-        const info = await transporter.sendMail({
-            from,
-            to,
-            subject,
-            text,
-            html
-        });
+    const info = await transporter.sendMail({
+        from,
+        to,
+        subject,
+        text,
+        html
+    });
 
-        return {
-            ok: true,
-            id: info.messageId
-        };
-    } catch (error) {
-        console.error('Error al enviar email:', error.message);
-        throw new Error('No se pudo procesar el email. Intenta más tarde.');
-    }
+    return {
+        ok: true,
+        id: info.messageId
+    };
 }
 
 function buildText(data) {
