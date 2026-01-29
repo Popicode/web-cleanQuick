@@ -566,6 +566,7 @@ body {
 
 
 .service-content p {
+    font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
     color: var(--color-texto--principal);
     margin-bottom: 1rem;
@@ -588,6 +589,7 @@ body {
     transition: transform 0.3s ease-in-out;
     border: none;
     outline: none;
+    font-size: 1rem
 }
 
 .service-cta:hover {
