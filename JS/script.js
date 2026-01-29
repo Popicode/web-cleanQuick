@@ -1,4 +1,5 @@
 import { mostrarAlerta } from './mostrarAlerta.js'
+import apiBase from '../config/url.js'
 
 // //?  Esperamos que el HTML este totalmente cargado para ejecutar
 document.addEventListener("DOMContentLoaded", function () {
@@ -109,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const res = await fetch('http://localhost:3000/api/contacto', {
+            const res = await fetch(`${apiBase}/api/contacto`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
