@@ -1,5 +1,5 @@
-const API_BASE_URL_LOCAL = "http://localhost:3000";
-const API_BASE_URL_PROD = "";
+const API_BASE_URL_LOCAL = "https://servidor-cleanquick.onrender.com";
+const API_BASE_URL_PROD = "https://servidor-cleanquick.onrender.com";
 
 let API_URL = '';
 
