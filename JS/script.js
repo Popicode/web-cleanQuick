@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLink = document.querySelectorAll(".nav-link");
     const titleServicios = document.querySelector(".services-grid > h2");
     const form = document.querySelector(".formulario-contacto");
-
+    const btnDisabled = document.querySelector('.contact-btn')
 
     //? Esto agrega la clase activo al menu-toggle // abre y cierra el boton 
     toggleBtn.addEventListener("click", () => {
@@ -85,14 +85,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const tel = (formData.get("tel") || "").toString().trim();
         const servicios = (formData.get("servicios") || "").toString().trim();
 
-
+        // guarda los datos extraidos 
         const payload = {
             name,
             email,
             tel,
             servicios
         }
+        const textBtnOriginal = 'Enviar solicitud'
+        btnDisabled.disabled = true;
+        btnDisabled.textContent = 'Enviando...'
 
+        // fetch API 
         try {
             const res = await fetch('http://localhost:3000/api/contacto', {
                 method: 'POST',
@@ -127,7 +131,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } catch (err) {
             mostrarAlerta(alertaExito, 'Ocurrio un error inesperado', true)
-        };
+        } finally {
+            btnDisabled.disabled = false
+            btnDisabled.textContent = textBtnOriginal
+        }
 
     })
 })
