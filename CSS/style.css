@@ -19,7 +19,6 @@
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     scroll-behavior: smooth;
-    transition: color .2s ease, background-color .2s ease, box-shadow .2s ease, transform .2s ease;
 }
 
 body {
@@ -567,6 +566,7 @@ body {
 
 
 .service-content p {
+    font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
     color: var(--color-texto--principal);
     margin-bottom: 1rem;
@@ -589,6 +589,7 @@ body {
     transition: transform 0.3s ease-in-out;
     border: none;
     outline: none;
+    font-size: 1rem
 }
 
 .service-cta:hover {
@@ -634,107 +635,6 @@ body {
 
 }
 
-
-/** Formulario para contacto en "services"*/
-.modal-overlay {
-    border: none;
-    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.08);
-    padding: 0;
-    max-width: none;
-    margin: auto;
-    /** Hace que se centre en el vw*/
-    border-radius: 20px;
-}
-
-.modal-overlay::backdrop {
-    background: rgba(0, 0, 0, .55);
-}
-
-
-.modal-forms {
-    position: relative;
-    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.08);
-    padding: 2.0rem;
-}
-
-.close-modal {
-    position: absolute;
-    top: 0;
-    right: 18px;
-    background: transparent;
-    border: none;
-    font-size: 2.5rem;
-    color: var(--color-principal-oscuro);
-    cursor: pointer;
-    z-index: 10;
-    transition: 0.2s ease-in-out;
-}
-
-.close-modal:hover {
-    font-size: 3rem;
-
-}
-
-.title-modal {
-    display: flex;
-    font-family: "Poppins", sans-serif;
-    justify-content: center;
-    color: var(--color-principal-oscuro);
-    font-size: 29px;
-}
-
-.formulario-modal {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 20px;
-}
-
-.formulario-modal label {
-    font-size: 17px;
-    padding-bottom: 2px;
-    font-family: "Poppins", sans-serif;
-}
-
-.formulario-modal input,
-.formulario-modal button {
-    font-family: "Poppins", sans-serif;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    background: none;
-    outline: none;
-    color: var(--color-principal-oscuro);
-    font-size: 14px;
-    border-bottom: 2px solid var(--color-principal-oscuro)
-}
-
-.formulario-modal button {
-    background: var(--color-principal);
-    border-radius: 20px;
-    border-bottom: 0;
-    color: var(--color-texto-inverso);
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-.formulario-modal>select,
-.formulario-modal>select>option {
-    color: var(--color-principal-oscuro);
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    padding: 5px;
-    border: none;
-    background: none;
-    outline: none;
-    border-bottom: 2px solid var(--color-principal-oscuro);
-}
-
-@media (max-width:768px) {
-    .modal-overlay {
-        display: none;
-    }
-}
 
 /** Sección "Como funciona"*/
 
@@ -865,6 +765,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 .contact-title {
@@ -911,7 +812,7 @@ body {
 }
 
 .select-contacto {
-    font-family: "Poppins" sans-serif;
+    font-family: "Poppins", sans-serif;
     width: 100%;
     background: none;
     border: none;
@@ -1060,7 +961,7 @@ body {
 .eslogan-f-subtitle {
     font-family: "Asap", sans-serif;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--color-texto--principal);
 }
 
@@ -1180,6 +1081,7 @@ body {
     }
 
     .eslogan-f-subtitle {
+        font-family: "Asap",sans-serif;
         font-size: 1rem;
         margin: 5px;
         text-align: center;
@@ -1220,13 +1122,13 @@ body {
     }
 }
 
+/* alerta del form (error o todo god) */
 .alerta-exito {
     text-align: center;
     background-color: #28a745;
     color: white;
     padding: 15px 20px;
     border-radius: 8px;
-    margin-top: 10px;
     display: none;
 }
 

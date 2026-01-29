@@ -8,23 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const navBar = document.querySelector(".nav-bar");
     const navLink = document.querySelectorAll(".nav-link");
     const titleServicios = document.querySelector(".services-grid > h2");
-    const buttonsModalOpen = document.querySelectorAll(".open-modal");
-    const modalOverlay = document.querySelector(".modal-overlay");
-    const closeModal = document.querySelector(".close-modal");
     const form = document.querySelector(".formulario-contacto");
-
-
-    //* for each para recorrer todos los botones para abrir el
-    //* modal overlay, "modal" es solo una referencia a los botones
-    buttonsModalOpen.forEach(modal => {
-        modal.addEventListener("click", () => {
-            modalOverlay.showModal()
-        })
-    })
-
-    closeModal.addEventListener("click", () => {
-        modalOverlay.close()
-    })
+    const btnDisabled = document.querySelector('.contact-btn')
 
     //? Esto agrega la clase activo al menu-toggle // abre y cierra el boton 
     toggleBtn.addEventListener("click", () => {
@@ -101,14 +86,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const tel = (formData.get("tel") || "").toString().trim();
         const servicios = (formData.get("servicios") || "").toString().trim();
 
-
+        // guarda los datos extraidos 
         const payload = {
             name,
             email,
             tel,
             servicios
         }
+        const textBtnOriginal = 'Enviar solicitud'
+        btnDisabled.disabled = true;
+        btnDisabled.textContent = 'Enviando...'
 
+        // fetch API 
         try {
             const res = await fetch(`${apiBase}/api/contacto`, {
                 method: 'POST',
@@ -143,7 +132,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } catch (err) {
             mostrarAlerta(alertaExito, 'Ocurrio un error inesperado', true)
-        };
+        } finally {
+            btnDisabled.disabled = false
+            btnDisabled.textContent = textBtnOriginal
+        }
 
     })
 })

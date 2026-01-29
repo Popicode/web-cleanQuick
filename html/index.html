@@ -53,7 +53,7 @@
             <p class="eslogan-hero2"> Profesionalismo, confianza y brillo garantizado</p>
         </div>
         <a class="hero-card" href="#contacto">
-            <div href="">
+            <div>
                 <p class="hero-title">PULSA AQUÍ Y</p>
                 <h4 class="hero-subtitle">ASEGURA TU HOGAR!</h4>
                 <img src="../imagenes/iconos/hero-icon1.svg" class="hero-icon">
@@ -71,8 +71,8 @@
                 <div class="service-content">
                     <h3 id="srv-departamentos-title" class="title-card-services">Limpieza de departamentos</h3>
                     <p>Servicio de calidad de higiene para departamentos.</p>
-                    <button type="button" class="service-cta open-modal"
-                        aria-label="Contacto para limpieza de departamentos">Cotizar</button>
+                    <a href="#contacto" class="service-cta"
+                        aria-label="Contacto para limpieza de departamentos">Cotizar</a>
                 </div>
             </article>
             <article class="service" aria-labelledby="srv-vidrios-titulo">
@@ -83,8 +83,7 @@
                 <div class="service-content">
                     <h3 id="srv-vidrios-title" class="title-card-services">Limpieza de vidrios</h3>
                     <p>Lavado profesional de cristales y ventanales con terminación, exterior y interior.</p>
-                    <button type="button" class="service-cta open-modal"
-                        aria-label="Contacto para limpieza de vidrios">Cotizar</button>
+                    <a href="#contacto" class="service-cta" aria-label="Contacto para limpieza de vidrios">Cotizar</a>
                 </div>
             </article>
             <article class="service" aria-labelledby="srv-oficinas-titulo">
@@ -95,9 +94,8 @@
                 <div class="service-content">
                     <h3 id="srv-oficinas-title" class="title-card-services">Limpieza de oficinas</h3>
                     <p>Servicio profesional para espacios de trabajos: puestos, salas de reunión, </p>
-                    <button type="button" class="service-cta open-modal"
-                        aria-label="Contacto para limpieza de oficinas">
-                        Cotizar</button>
+                    <a href="#contacto" class="service-cta" aria-label="Contacto para limpieza de oficinas">
+                        Cotizar</a>
                 </div>
             </article>
         </div>
@@ -182,9 +180,6 @@
                 <h4 class="eslogan-f-title">Preparado para tú proxima limpieza?</h4>
                 <p class="eslogan-f-subtitle">Comienza ya!</p>
             </div>
-            <div class="footer-eslogan-col2">
-                <button class="eslogan-f-btn">Contactanos</button>
-            </div>
         </div>
         <div class="footer-container">
             <div class="footer-col1">
@@ -202,47 +197,19 @@
             <div class="footer-col4">
                 <h4 class="footer-col-title">Siguenos</h4>
                 <div class="redes-contenedor">
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="icon"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://web.facebook.com/luisaangelica.escalonajauneaud.1/" target="_blank" class="icon"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/969168870" target="_blank" class="icon"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/luisaescalonajaune/" target="_blank" class="icon"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:tapia65escalona@gmail.com" target="_blank" class="icon"><i
+                            class="fa-regular fa-envelope"></i></a>
 
                 </div>
             </div>
         </div>
     </footer>
-
-    <dialog class="modal-overlay ">
-        <section class="modal-forms">
-            <button class="close-modal" aria-label="Cerrar modal">&times;</button>
-            <h3 class="title-modal">Contacto</h3>
-            <!-- <h4 class="subtitle-modal">Ingresa tús datos y te contactaremos en la brevedad</h4> -->
-            <div class="contenedor-forms">
-                <form class="formulario-modal" action="">
-                    <div>
-                        <label for="name">Nombre completo</label>
-                        <input id="name" type="text" placeholder="Ingrese su nombre">
-                    </div>
-                    <div>
-                        <label for="email">Correo electronico</label>
-                        <input id="email" type="email" placeholder="Ingrese su gmail">
-                    </div>
-                    <div>
-                        <label for="tel">Telefono</label> <input id="tel" type="tel" placeholder="ingrese su numero">
-                    </div>
-                    <label for="servicios-modal">Servicios disponibles</label>
-                    <select name="servicios-modal" id="servicios-modal">
-                        <option disabled selected>Seleccione un servicio..</option>
-                        <option value="servicio-departamento">Limpieza de departamentos</option>
-                        <option value="servicio-vidrios">limpieza de vidrios</option>
-                        <option value="servicio-casas">Limpieza de casas</option>
-                        <option value="servicio-oficinas">Limpieza de oficinas</option>
-                        <option value="servicio-obras">Limpieza post obras</option>
-                    </select>
-                    <button type="submit">Enviar</button>
-                </form>
-        </section>
-    </dialog>
     <script type="module" src="../JS/script.js"></script>
 
 </html>
