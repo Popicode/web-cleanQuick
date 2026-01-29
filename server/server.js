@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import validateEnv from '../config/validateEnv.js';
-dotenv.config({ path: './config/.env' });
+dotenv.config();
 
 try {
     validateEnv()
@@ -27,7 +27,7 @@ const corsMiddleware = (await import('./middlewares/cors.js')).default;
 
 
 const app = express();
-const PORT = Number(process.env.PORT ?? 3000);
+const PORT = Number(process.env.PORT || 10000);
 
 
 
@@ -52,6 +52,7 @@ app.use(express.json({ limit: '10kb' }));
 
 app.use('/api', apiLimiter);
 
+
 //rutas
 app.use('/api', HealthRoutes);
 app.use('/api', ContactRoutes);
@@ -63,8 +64,9 @@ app.use(notFound);
 app.use(errorHandler);
 
 
-const serverOn = app.listen(PORT, () =>
-    console.log(`Servidor corriendo en http://localhost:${PORT}`)
+
+const serverOn = app.listen(PORT, '0.0.0.0', () =>
+    console.log(`Servidor corriendo en puerto ${PORT}`)
 );
 
 
