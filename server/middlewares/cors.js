@@ -8,6 +8,9 @@ const allowedOrigins = varOriginCors
     .filter(Boolean);
 
 export default function corsMiddleware(req, res, next) {
+    if (req.path === '/api/health') {
+        return next();
+    }
 
     const origin = req.headers.origin;
 
