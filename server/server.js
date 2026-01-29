@@ -29,7 +29,8 @@ const corsMiddleware = (await import('./middlewares/cors.js')).default;
 const app = express();
 const PORT = Number(process.env.PORT || 10000);
 
-
+// Confiar en proxy inverso (importante para Render)
+app.set('trust proxy', 1);
 
 
 try {
