@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import validateEnv from '../config/validateEnv.js';
+import validateEnv from '../../config/validateEnv.js';
 dotenv.config();
 
 try {
@@ -18,7 +18,7 @@ import HealthRoutes from "./routes/health.routes.js"
 import ContactRoutes from "./routes/contact.routes.js"
 import notFound from "./middlewares/notFound.js"
 import errorHandler from "./middlewares/errorHandler.js"
-import shutdown from '../config/shutdown.js';
+import shutdown from '../../config/shutdown.js';
 
 
 
