@@ -1,5 +1,5 @@
-const API_BASE_URL_LOCAL = "https://servidor-cleanquick.onrender.com";
-const API_BASE_URL_PROD = "https://servidor-cleanquick.onrender.com";
+const API_BASE_URL_LOCAL = "https://cleanquick-servidor-production.up.railway.app";
+const API_BASE_URL_PROD = "https://cleanquick-servidor-production.up.railway.app";
 
 let API_URL = '';
 
