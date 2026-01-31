@@ -5,7 +5,7 @@ express 5.2.0 "Servidor HTTP"
 dotenv 17.2.3 "Permite cargar variables de entorno"
 express-rate-limit 8.2.1 "Permite hacer rate limiting"
 helmet 8.1.0 "Headers seguros para los navegadores"
-nodemailer 7.0.12 "Servicio SMTP"
+Resend "Envio de email"
 
 Dev: Nodemon 3.1.11. "Reinicia el sv al guardar"
 
