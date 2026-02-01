@@ -9,7 +9,7 @@ export function validateSMTPConfig() {
 
     const missingVars = [];
 
-    if (!apiKey) missingVars.push('RESEND_API)KEY');
+    if (!apiKey) missingVars.push('RESEND_API_KEY');
     if (!mailTo) missingVars.push('MAIL_TO');
     if (!mailFrom) missingVars.push('MAIL_FROM');
 
