@@ -1,10 +1,8 @@
-import { createTransporter } from '../services/mailer.js'
+import { sendEmail } from '../services/mailer.js'
 
 export async function procesarSolicitudContacto(data) {
-    const transporter = await createTransporter();
-
     const to = process.env.MAIL_TO;
-    const from = process.env.MAIL_FROM || process.env.SMTP_USER; // usa uno o usa el otro
+    const from = process.env.MAIL_FROM;
 
     if (!to) {
         throw new Error('Error, falta MAIL_TO en el entorno (.env)')
@@ -15,7 +13,7 @@ export async function procesarSolicitudContacto(data) {
     const html = buildHtml(data);
 
     try {
-        const info = await transporter.sendMail({
+        const result = await sendEmail({
             from,
             to,
             subject,
@@ -25,7 +23,7 @@ export async function procesarSolicitudContacto(data) {
 
         return {
             ok: true,
-            id: info.messageId
+            id: result.id
         };
 
     } catch (error) {
