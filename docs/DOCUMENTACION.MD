@@ -10,3 +10,8 @@ Resend "Envio de email"
 Dev: Nodemon 3.1.11. "Reinicia el sv al guardar"
 
 # Para verificar mejor las dependencias, visitar el './package.json'
+
+-----------
+
+El servicio de email sera remplazado por el siguiente motivo:
+- En hosting como Render-Railway los servicios gratuitos bloquean SMPT, por temas de spam,etc.
