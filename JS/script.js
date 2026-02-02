@@ -121,7 +121,8 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
             if (res.status === 400) {
-                mostrarAlerta(alertaExito, data.message || 'Revisa los datos ingresados', true)
+                const mensajeError = data.errors ? data.errors.join('. ') : 'Revisa los datos ingresados'
+                mostrarAlerta(alertaExito, mensajeError, true)
                 return
             };
 
