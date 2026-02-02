@@ -16,11 +16,13 @@ Por el momento la estructura iría de la siguiente manera:
 - `CSS/`: contiene los estilos (`style.css`)
 - `JS/`: contiene el script (`script.js`)
 - `imagenes/`: contiene imágenes utilizadas en el sitio.
-- `server/`: contiene las rutas, controladores, servicios y controladores del backend.
+- `server/`: contiene las rutas, controladores, servicios del backend.
+
+El servidor estara desplegado en Railway y el frontend en Vercel.
 
 Se diseñara para desktop primero y luego se hara responsivo para todas las pantallas.
 
-Gracias por ver! espero que este proyecto crezca lo suficiente.
+Gracias por ver! 
 
 # By
 
