@@ -126,12 +126,12 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
             if (res.status) {
-                mostrarAlerta(alertaExito, 'Ocurrio un error inesperado, por favor intentalo nuevamente', true)
+                mostrarAlerta(alertaExito, 'Ocurrió un error inesperado, por favor inténtalo nuevamente', true)
                 return
             }
 
         } catch (err) {
-            mostrarAlerta(alertaExito, 'Ocurrio un error inesperado', true)
+            mostrarAlerta(alertaExito, 'Ocurrió un error inesperado', true)
         } finally {
             btnDisabled.disabled = false
             btnDisabled.textContent = textBtnOriginal

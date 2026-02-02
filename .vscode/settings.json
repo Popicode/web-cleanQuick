@@ -5,5 +5,14 @@
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#b7d821"
     },
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "cSpell.language": "en,es",
+    "cSpell.enabled": true,
+    "cSpell.enabledLanguageIds": [
+        "html",
+        "javascript",
+        "css",
+        "markdown",
+        "plaintext"
+    ]
 }

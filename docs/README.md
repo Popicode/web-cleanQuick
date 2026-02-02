@@ -11,16 +11,16 @@ Es mi primer proyecto de pagina web, usare el siguiente stack:
 
 Para el backend usare Node.js + Express.js
 
-Por el momento la estructura iría de la siguiente manera:
+Por el momento la estructura irá de la siguiente manera:
 
 - `CSS/`: contiene los estilos (`style.css`)
 - `JS/`: contiene el script (`script.js`)
 - `imagenes/`: contiene imágenes utilizadas en el sitio.
 - `server/`: contiene las rutas, controladores, servicios del backend.
 
-El servidor estara desplegado en Railway y el frontend en Vercel.
+El servidor estará desplegado en Railway y el frontend en Vercel.
 
-Se diseñara para desktop primero y luego se hara responsivo para todas las pantallas.
+Se diseñará para desktop primero y luego se hará responsivo para todas las pantallas.
 
 Gracias por ver! 
 
