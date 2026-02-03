@@ -814,7 +814,7 @@ body {
     width: 100%;
     background: none;
     border: none;
-    padding: 7px 7px;
+    padding: 5px 5px;
     outline: none;
     color: var(--color-principal-oscuro);
     font-size: 14px;
@@ -890,7 +890,6 @@ body {
     .contact-section {
         padding: 3rem 2rem;
     }
-
 }
 
 @media (width <=767px) {
@@ -898,6 +897,9 @@ body {
         display: flex;
         flex-direction: column;
         padding: 0 auto;
+    }
+    .contact-form-block{
+        padding: 35px;
     }
     
     .contact-title {
@@ -916,10 +918,11 @@ body {
     .contact-btn {
         margin-top: 1rem;
     }
+  
 
 }
 
-/* Sección footer*/
+/*?  Sección footer*/
 .footer-section {
     background-color: #151c35;
     color: var(--color-texto-inverso);
