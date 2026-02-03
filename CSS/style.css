@@ -1060,9 +1060,9 @@ body {
     transform: rotate(45deg);
 }
 
-@media (320px <=width <=768px) {
+@media (max-width: 768px) {
     .footer-section {
-        padding: 2rem 5rem;
+        padding: 2rem 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1097,7 +1097,7 @@ body {
         border-radius: 10px;
     }
 
-    /*colum del footer*/
+    /*? colum del footer*/
     .footer-container {
         display: flex;
         flex-direction: column;
@@ -1113,7 +1113,8 @@ body {
     }
 
     .footer-marca {
-        margin-left: -2px;
+        text-align: center;
+        margin-left: 0;
     }
 
     .footer-col-title {
@@ -1125,6 +1126,13 @@ body {
     .enlaces-footer {
         padding-top: 5px;
         margin: 2px;
+        text-align: center;
+    }
+    .footer-lista{
+        text-align: center;
+    }
+    .redes-contenedor{
+        gap: 10px;
     }
 }
 
