@@ -476,8 +476,7 @@ body {
     align-items: stretch;
     color: var(--color-principal-oscuro);
     font-size: 1.3rem;
-    margin-bottom: 5rem;
-
+    margin-bottom: 1rem;
 }
 
 .services-grid>h2 {
@@ -684,7 +683,6 @@ body {
     padding: 1.0rem;
     max-width: 350px;
     height: 100%;
-
 }
 
 .title-como-funciona {
@@ -739,11 +737,11 @@ body {
 
 /** Sección "Contacto" */
 .contact-section {
+    margin-top: -5rem;
     display: flex;
     padding: 6rem 4rem;
     justify-content: center;
-    margin-bottom: 15rem;
-
+    margin-bottom: 3rem;
 }
 
 .contact-container {
@@ -900,9 +898,8 @@ body {
         display: flex;
         flex-direction: column;
         padding: 0 auto;
-
     }
-
+    
     .contact-title {
         font-size: 2.1rem;
     }
@@ -1119,7 +1116,7 @@ body {
     .footer-col-title {
         font-size: 18px;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 11px;
     }
 
     .enlaces-footer {
