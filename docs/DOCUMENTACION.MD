@@ -15,3 +15,5 @@ Dev: Nodemon 3.1.11. "Reinicia el sv al guardar"
 
 El servicio de email será reemplazado por el siguiente motivo:
 - En hosting como Render-Railway los servicios gratuitos bloquean SMTP, por temas de spam, etc.
+
+/ El dominio fue comprado en BlueHosting, actualmente tengo que migrar el nameserver a cloudflare para poder controlar el DNS PRIMARIO
