@@ -1,5 +1,5 @@
-const API_BASE_URL_LOCAL = "https://web-cleanquick-production.up.railway.app";
-const API_BASE_URL_PROD = "https://web-cleanquick-production.up.railway.app";
+const API_BASE_URL_LOCAL = "http://localhost:5501";
+const API_BASE_URL_PROD = "https://api.cleanquick.cl";
 
 let API_URL = '';
 
